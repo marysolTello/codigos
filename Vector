@@ -1,0 +1,12 @@
+Algoritmo vector
+	Escribir "Programa para calcular el cuadrado y cubo de 10 números ingresados";
+	Definir vector_numeros, i, c2, c3 Como Entero;
+	Dimension vector_numeros[10]; //Establezco la dimensión del vector
+	Para i=0 hasta 9 Hacer //el para es para establecer los valores en cada uno de los espacios
+		Escribir "Ingrese 10 números entre 1 y 10";
+		Leer vector_numeros[i]; //va leyendo cada valor ingresado
+		c2=vector_numeros[i]^2; //al valor que se ingresó se lo eleva al cuadrado
+		c3=vector_numeros[i]^3; //al valor que se ingresó se lo eleva al cubo
+		Escribir "El número ingresado es " vector_numeros[i] ", su cuadrado es " c2 " y su cubo es " c3;
+	FinPara
+FinAlgoritmo
