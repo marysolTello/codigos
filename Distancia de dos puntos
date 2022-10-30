@@ -1,0 +1,11 @@
+Algoritmo distancia_de_dos_puntos
+	Escribir "Programa para calcular la distancia de dos puntos en el plano";
+	Definir d, x1, x2, y1, y2 Como Real;
+	Escribir "Por favor, ingrese los valores de x1, y1, x2 e y2";
+	Escribir "Deberá ingresarlos en el orden dicho";
+	Leer x1, y1, x2, y2;
+	//Los valores se restan según la fórmula
+	//Se calcula igual que en la hipotenusa
+	d=rc((x2-x1)^2+(y2-y1)^2);
+	Escribir "La distancia entre los puntos es " d;
+FinAlgoritmo
