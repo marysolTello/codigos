@@ -1,0 +1,42 @@
+Algoritmo alumnos_edades
+	Escribir "Prorgrama para ingresar nombres y edades de alumnos para mostrar cuáles son mayores de edad y cuáles son los mayores";
+	Definir edades, mayores, i, n Como Entero;
+	Definir alumnos Como Caracter;
+	Escribir sin saltar "Por favor, ingrese la cantidad de nombres";
+	Leer n;
+	Dimension edades[n+10];
+	Dimension alumnos[n+10];
+	i<-0;
+	Repetir //se ingresa el nombre de los alumnos
+		Escribir Sin Saltar "Por favor, ingrese el nombre del alumno:";
+		Leer alumnos[i];
+		Si alumnos[i]<>"*" Entonces //En caso de que el nombre no fuera * se agrega la edad
+			Escribir sin saltar "Por favor, ingrese la edad del alumno:";
+			Leer edades[i];
+		FinSi
+		i<-i+1; //este es el contador
+	Hasta Que alumnos[i-1]="*";
+	i<-0; //se inicializa de nuevo el contador para analizar los datos ingresados
+	mayores<-edades[0]; //la edad ingresada en la posición 0 se almacena en mayores
+	Escribir "Alumnos mayores de edad:";
+	Mientras alumnos[i]<>"*" Hacer //se analiza que el nombre no sea *
+		//se analiza si el alumno es mayor de edad
+		Si edades[i]>=18 Entonces 
+			Escribir alumnos[i];
+		FinSi
+		//acá se analiza si la edad que está en la posición i es mayor que la que está almacenada de mayores
+		Si edades[i]>mayores Entonces
+			//en caso de que lo fuera, ese valor se va a almacenar en mayores
+			mayores<-edades[i];
+		FinSi
+		i<-i+1; //contador
+	FinMientras
+	i<-0; //se inicializa de nuevo el contador para analizar los datos ingresados
+	Mientras alumnos[i]<>"*" Hacer 
+		//esto último es para que se muestre los alumnos que son mayores y no se mezcle con los mensajes anteriores
+		Si edades[i]=mayores Entonces
+			Escribir "Alumno mayor: " alumnos[i];
+		FinSi
+		i<-i+1;
+	FinMientras
+FinAlgoritmo
