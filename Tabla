@@ -1,0 +1,11 @@
+Algoritmo tabla
+	Escribir "Programa que muestra la tabla de multiplicar hasta el 10";
+	Definir i, n, t Como Entero;
+	Escribir sin saltar "Por favor, ingrese un número";
+	Leer n;
+	Para i=0 Hasta 10 Hacer
+		//El número ingresado va a multiplicarse por i hasta que llegue a 10
+		t=n*i;
+		Imprimir t;
+	FinPara
+FinAlgoritmo
