@@ -1,0 +1,14 @@
+Algoritmo digitos
+	Escribir "Programa que indica dígitos a la izquierda de un número";
+	Definir x, i Como Real;
+	Escribir sin saltar "Por favor, ingrese el número";
+	Leer x;
+	i=0;
+	Repetir
+		//El número ingresado se divide por 10 hasta que el número sea menor a 1
+		//Según la cantidad de veces que se repita, son los dígitos a la izquierda
+		x<-x/10;
+		i<-i+1;
+	Hasta Que x<1;
+	Escribir "Digitos a la izquierda: " i;
+FinAlgoritmo
