@@ -1,0 +1,30 @@
+Algoritmo orden_numeros
+	Escribir "Programa que imprime números al azar y los ordena de menor a mayor";
+	Definir vector, c, a, i, tvector Como Entero;
+	Dimension vector[10];
+	tvector=10;
+	//Inicializo el vector con valores aleatorios.
+	Para i<-0 hasta tvector-1 hacer
+		vector[i]<-aleatorio(1,10);
+	FinPara
+	//Voy a repetir la ordenación hasta que no haya cambiado ningún número
+	Repetir 
+		c<-0;
+		//Recorre hasta el antepenúltimo
+		//Intercambio los valores de dos elementos consecutivos si no están ordenados
+		Para i<-0 hasta tvector-2 Hacer
+			Si vector[i]>vector[i+1] Entonces
+				a<-vector[i];
+				vector[i]<-vector[i+1];
+				vector[i+1]<-a;
+				c<-c+1;
+			FinSi
+		FinPara
+	Hasta Que c=0;
+	//Recorro el vector ordenado
+	Escribir "Números ordenados";
+	Para i<-0 hasta tvector-1 Hacer
+		Escribir Sin Saltar vector[i]," ";
+	FinPara
+	Escribir " ";
+FinAlgoritmo
