@@ -1,0 +1,12 @@
+Algoritmo par_o_impar
+	Escribir "Hola. Este es un programa que indica si un número es par o impar";
+	Definir x Como Entero;
+	Escribir sin saltar "Por favor, ingrese un número";
+	Leer x;
+	//Se analiza si el resto de la división de x y 2 es igual a 0
+	Si x mod 2=0 Entonces
+		Escribir x, " es par";
+	SiNo
+		Escribir x, " es impar";
+	Fin Si
+FinAlgoritmo
