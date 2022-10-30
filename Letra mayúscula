@@ -1,0 +1,13 @@
+Algoritmo letra_mayus
+	Escribir "¡Bienvenido!";
+	Escribir "Este es un programa para indentificar si una letra ingresada es mayúscula o minúscula";
+	Definir letra Como Caracter;
+	Escribir sin saltar "Por favor, ingrese una letra";
+	Leer letra;
+	//Se analiza si la letra está entre la A y la Z
+	Si letra>='A' y letra<='Z' Entonces
+		Escribir "La letra es mayúscula";
+	SiNo
+		Escribir "La letra es minúscula";
+	Fin Si
+FinAlgoritmo
