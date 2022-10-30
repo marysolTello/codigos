@@ -1,0 +1,28 @@
+Algoritmo orden_numeros
+	Escribir "Hola. Este es un programa para ingresar números y mostrar el orden de estos";
+	Definir n1, n2, n3 Como Entero;
+	Escribir "Por favor, ingrese tres números";
+	Leer n1, n2, n3;
+	//Va comparando el mayor y menor de los números para mostrarlos en orden
+	Si n1>n2 y n1>n3 y n2>n3 Entonces
+		Escribir "El orden es " n1 ", " n2 ", " n3;
+	SiNo
+		Si n1>n2 y n1>n3 y n3>n2 Entonces
+			Escribir "El orden es " n1 ", " n3 ", " n2;
+		SiNo
+			Si n2>n1 y n2>n3 y n1>n3 Entonces
+				Escribir "El orden es " n2 ", " n1 ", " n3;
+			SiNo
+				Si n2>n3 y n2>n1 y n3>n1 Entonces
+					Escribir "El orden es " n2 ", " n3 ", " n1;
+				SiNo
+					Si n3>n1 y n3>n2 y n1>n2 Entonces
+						Escribir "El orden es " n3 ", " n1 ", " n2;
+					SiNo
+						Escribir "El orden es " n3 ", " n2 ", " n1;
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+FinAlgoritmo
