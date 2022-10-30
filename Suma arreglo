@@ -1,0 +1,28 @@
+Algoritmo suma_arreglos
+	Escribir "Programa para ingresar 10 números del 0 al 9 en dos arreglos";
+	Escribir "Los números ingresados se sumarán en un nuevo arreglo";
+	Definir arreglo1, i, a, arreglo2 Como Entero;
+	Dimension arreglo1[10];
+	Dimension arreglo2[10];
+	Dimension a[10];
+	Escribir "Arreglo 1";
+	//Primero hago que el usuario ingrese los valores del primero arreglo
+	Para i=0 hasta 9 hacer
+		Escribir sin saltar "Ingrese un número entre 0 y 9";
+		Leer arreglo1[i];
+	FinPara
+	Escribir "Arreglo 2";
+	//Luego se ingresan los del segundo
+	Para i=0 hasta 9 hacer
+		Escribir sin saltar "Ingrese un número entre 0 y 9";
+		Leer arreglo2[i];
+	FinPara
+	Para i=0 hasta 9 hacer
+		//Según en la posición en la que estén, se van a ir sumando los valores del arreglo
+		a[i]=arreglo1[i]+arreglo2[i];
+	FinPara
+	Escribir "La suma del arreglo es:" ;
+	Para i=0 hasta 9 Hacer
+		Escribir a[i];
+	FinPara
+FinAlgoritmo
