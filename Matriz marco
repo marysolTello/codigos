@@ -1,0 +1,27 @@
+Algoritmo matriz_marco
+	Escribir "Programa para formar un marco con una matriz de números";
+	Definir marco, i, c Como Entero;
+	Dimension marco[5,15];
+	//Los paras para que se posicionen los valores
+	Escribir "MARCO";
+	Escribir "=====";
+	Para i=0 Hasta 5-1 Hacer
+		Para c=0 Hasta 15-1 Hacer 
+			Si i=0 o i=4 o c=0 o c=14 Entonces
+				//se toma en cuenta la posición de los 1 para que se forme el marco
+				marco[i,c]=1;
+			SiNo
+				//si está fuera del marco se agrega el 0
+				marco[i,c]=0;
+			FinSi
+		FinPara
+	FinPara
+	//se muestran los valores guardados en los arreglos
+	Para i=0 Hasta 5-1 Hacer
+		Para c=0 Hasta 15-1 Hacer
+			Escribir sin saltar marco[i,c];
+		FinPara
+		Escribir " "; //este sirve para que se muestren las 15 columnas
+		//al estar el espacio, luego de las 15, las siguientes columnas se muestran abajo
+	FinPara
+FinAlgoritmo
