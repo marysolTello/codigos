@@ -1,0 +1,15 @@
+Algoritmo nombre
+	Escribir "Programa para mostrar un nombre ingresado escrito al revés";
+	Definir vt1, vt2 Como Caracter; //se definen los vectores, el del nombre y el nombre invertido
+	Definir i Como Entero; 
+	Dimension vt1[5], vt2[5]; //se aplican las dimensiones en los vectores
+	Para i=0 hasta 4 Hacer
+		Escribir sin saltar "Ingrese un nombre de 5 letras (letra por letra)";
+		Leer vt1[i]; //se lee la letra 
+		vt2(4-i)=vt1[i]; //en el segundo vetor se ingresa la letra del primero, en la posición 4 menos el número por el que va el contador i
+	FinPara
+	Para i=0 hasta 4 Hacer
+		Escribir SIN SALTAR vt2[i]; //se muestra cada letra
+	FinPara
+	Escribir " ";
+FinAlgoritmo
