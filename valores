@@ -1,0 +1,29 @@
+Funcion calcularmax(n,cant,may Por Referencia, men Por Referencia)
+	Definir i Como Entero;
+	//Se comparan los valores para ver el máximo y el mínimo
+	may=n[0];
+	men=n[0];
+	para i=0 hasta cant-1 Hacer
+		Si n[i]>may Entonces 
+			may=n[i];
+		FinSi
+		Si n[i]<men Entonces 
+			men=n[i];
+		FinSi
+	FinPara
+FinFuncion
+Algoritmo valores
+	Escribir "Programa para introducir valores en un arreglo y mostrar cuál fue el máximo y el mínimo";
+	Definir i, cant Como Entero;
+	Definir n, max, min, m Como Real;
+	Dimension n[5];
+	Escribir sin saltar "Ingresar la cantidad de valores que introducirá";
+	Leer cant;
+	//Primero le hago ingresar al usuario los valores del arreglo
+	para i=0 hasta cant-1 Hacer
+		Escribir sin saltar "Ingrese un valor";
+		Leer n[i];
+	FinPara
+	calcularmax(n,cant,max,min);
+	Escribir "El valor máximo es " max " y el menor " min;
+FinAlgoritmo
