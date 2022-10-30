@@ -1,0 +1,18 @@
+Algoritmo dia_de_la_semana
+	Escribir "Programa que indica día de la semana según una fecha ingresada";
+	Definir x Como Entero;
+	Escribir sin saltar "Por favor, ingrese la fecha";
+	Leer x;
+	Segun x Hacer
+		//Lo tomé como que el mes empieza desde un domingo y que el mes tiene 31 días
+		1, 8, 15, 22, 29: Escribir "Domingo";
+		2, 9, 16, 23, 30: Escribir "Lunes";
+		3, 10, 17, 24, 31: Escribir "Martes";
+		4, 11, 18, 25: Escribir "Miércoles";
+		5, 12, 19, 26: Escribir "Jueves";
+		6, 13, 20, 27: Escribir "Viernes";
+		7, 14, 21, 28: Escribir "Sábado";
+		De Otro Modo:
+			Escribir "Error. El número ingresado no corresponde a una fecha";
+	FinSegun
+FinAlgoritmo
