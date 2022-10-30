@@ -1,0 +1,18 @@
+Funcion m=media(tmax, tmin)
+	//Calcular la media de dos días
+	//Se calcula la media a continuación
+	Definir m Como Real;
+	m=(tmax+tmin)/2;
+FinFuncion
+Algoritmo tempmedia
+	Escribir "Programa para calcular la temperatura media de diferentes días ingresados";
+	Definir d, i Como Entero;
+	Definir tempmax, tempmin Como Real;
+	Escribir Sin Saltar "Ingrese el número de días";
+	Leer d;
+	Para i=0 Hasta d-1 Hacer //se repite la estructura según la cantidad de días
+		Escribir Sin Saltar "Ingrese la temperatura máxima y la mínima (en ese orden)";
+		Leer tempmax, tempmin;
+		Escribir "La media de a temperatura de este día es " media(tempmax, tempmin);
+	FinPara
+FinAlgoritmo
