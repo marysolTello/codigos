@@ -1,0 +1,47 @@
+Algoritmo matrices
+	Escribir "Programa mostrar una matriz y dumar sus filas y columnas";
+	Definir i, c, matriz, sumafilas, sumacolumnas, conta Como Entero;
+	Dimension matriz[5,5];
+	Dimension sumacolumnas[5];
+	Escribir "Procederemos a ingresar los valores de la matriz";
+	Escribir "El orden será de izquierda a derecha y de arriba a abajo";
+	Para i=0 Hasta 5-1 Hacer //se ingresan los valores en tabla segun la posicion
+		//en este caso, i ca a contar las filas
+		Para c=0 Hasta 5-1 Hacer //c cuentas las columnas
+			Escribir sin saltar "Ingrese un valor";
+			Leer matriz[i,c]; //Al poner primero i se va a tomar primero en cuenta la fila en la que está y luego la columna
+		FinPara
+	FinPara
+	Escribir "MATRIZ CON RESULTADO DE SUS FILAS Y COLUMNAS";
+	Escribir "============================================";
+	Para i=0 Hasta 5-1 Hacer
+		sumafilas=0; //el acumulador que va a sumar las filas se inicializa
+		//Se lo coloca acá para que se vaya inicializando por cada fila
+		Para c=0 Hasta 5-1 Hacer
+			sumacolumnas[c]=0; //el acumulador que va a contar las columnas se inicializa
+			//lo mismo que en el anterior, se debe hacer acá para que se inicialice de nuevo por cada columna
+			//No se inicializa antes porque la estructura de este para va a seguir y va a sumar todo
+			sumafilas=sumafilas+matriz[i,c]; //acá se suman las filas
+			//se tiene en cuenta la fila (i) y a qué columna corresponde
+			//El resultado de la suma se va a guardar en una variable
+			Para conta=0 Hasta 5-1 Hacer //acá se suman las columnas
+				sumacolumnas[c]=sumacolumnas[c]+matriz[conta,c];
+				//se debe tener en cuenta primero el conta que va a ir sumando los números alineado en la columna
+				//c cuenta la columna en la que está
+			FinPara
+			Si matriz[i,c]<=9 y matriz[i,c]>=0 Entonces //acá lo que se hace es agregar un 0 si el número es de una cifra
+				//esto es para que la matriz quede alineada
+				Escribir sin saltar "0" matriz[i,c] " ";
+			SiNo
+				Escribir sin saltar matriz[i,c] " ";
+			FinSi
+		FinPara
+		Escribir "= " sumafilas; //se muestra el resultado de la suma de las filas
+	FinPara
+	Escribir "=  =  =  =  =";
+	Para c=0 hasta 5-1 Hacer //esto se hace fuera del para anterior porque tiene que ir al final
+		Escribir sin saltar sumacolumnas[c] " "; 
+		//se van mostrando los resultado guardados en las posiciones del arreglo
+	FinPara
+	Escribir "Fin del proceso";
+FinAlgoritmo
