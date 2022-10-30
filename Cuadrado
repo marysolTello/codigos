@@ -1,0 +1,7 @@
+Algoritmo cuadrado
+	Escribir "¿Cuánto es 243 al cuadrado?";
+	Definir R Como Entero;
+	//Se eleva 243 al cuadrado
+	R<-243^2;
+	Escribir "El cuadrado es " R;
+FinAlgoritmo
