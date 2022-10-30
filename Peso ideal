@@ -1,0 +1,25 @@
+Algoritmo peso_ideal
+	Escribir "Peso ideal";
+	Definir e, P, Pid Como Real;
+	Escribir sin saltar "Ingresa tu estatura";
+	Leer e;
+	Escribir sin saltar "Ingresa tu peso";
+	Leer P;
+	Pid<-e-100;
+	//Según el ejercicio, se va analizando el peso y la estatura para saber si su peso es el ideal, bajo o alto
+	Si P>0 y Pid>0 y e>0 Entonces
+		Si P>Pid Entonces
+			Escribir "Sobrepeso";
+		SiNo
+			Si P=Pid Entonces
+				Escribir "Peso ideal";
+			SiNo
+				Si P<Pid Entonces
+					Escribir "Peso bajo";
+				Fin Si
+			Fin Si
+		Fin Si
+	SiNo
+		Escribir "Error";
+	Fin Si
+FinAlgoritmo
