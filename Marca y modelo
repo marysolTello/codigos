@@ -1,0 +1,12 @@
+Algoritmo marca_y_modelo
+	//El programa solo muestra lo ingresado
+	Escribir  "Programa para informar modelo y nombre de automóviles";
+	Definir MA Como Caracter;
+	Definir modelo Como Entero;
+	Escribir sin saltar "Por favor, ingrese la marca del auto";
+	Leer MA;
+	Escribir sin saltar "Por favor, ingrese el modelo del auto";
+	Leer modelo;
+	Escribir "Modelo: " modelo;
+	Escribir "Marca del auto: " MA;
+FinAlgoritmo
