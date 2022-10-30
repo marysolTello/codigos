@@ -1,0 +1,21 @@
+Algoritmo sueldo_por_hora
+	Escribir "Programa para calcular el sueldo de acuerdo a las horas trabajadas";
+	Definir d, n, acum, st, sh, h Como Real;
+	Escribir sin saltar "Por favor, ingrese el valor por hora";
+	Leer sh;
+	Escribir sin saltar "Por favor, ingrese la cantidad de días trabajados";
+	Leer n;
+	d=0;
+	acum=0;
+	Repetir
+		Escribir sin saltar "Por favor, ingrese el total de horas trabajadas en un día";
+		Leer h;
+		//El contador es para que se repita el proceso hasta que se complete la cantidad de días trabajados
+		d=d+1;
+		//Y el acumulador va a contar la cantidad de horas que se trabajó en la semana
+		acum=h+acum;
+	Hasta Que d=n;
+	//Las horas totales se multiplican por el sueldo por hora para que dé el sueldo total
+	st=acum*sh;
+	Escribir "La cantidad de horas trabajadas a la semana es " acum " y el sueldo total es " st;
+FinAlgoritmo
