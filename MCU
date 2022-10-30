@@ -1,0 +1,18 @@
+Algoritmo mcu
+	Escribir "Programa para calcular el punto de encuentro de dos autos";
+	Definir n1, n2, d Como Real;
+	Escribir "Ingrese el kilómetro en donde se encuentra el primer vehículo, y luedo el segundo";
+	Leer n1, n2;
+	Repetir
+		//Se restan los kilómetros en los que están para saber la diferencia 
+		//Se usa el abs para que el número no aparezca en negativo
+		d=abs(n2-n1);
+		//Al segundo vehículo se le va restando un kilómetro para que llegue hasta el otro
+		n2=n2-1;
+		//Y al primero se le suma uno para que cumpla la misma finalidad
+		n1=n1+1;
+		//El proceso se repite hasta que la distancia sea 0
+	Hasta Que d=0;
+	//Se le suma un 1 a n2 porque sino con la resta da un número menos
+	Escribir "El punto de encuentro es " n2+1;
+FinAlgoritmo
