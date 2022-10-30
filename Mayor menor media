@@ -1,0 +1,46 @@
+Algoritmo mayor_menor_media
+	Escribir "Programa que determina el número más pequeño, el más grande y la media";
+	Definir i, acum, n, x, p, g Como Entero;
+	Definir m Como Real;
+	i<-0;
+	acum<-0;
+	Escribir "¿Cuántos números me darás?";
+	Leer n;
+	//Se evalúa primero si la cantidad de números es mayor a 0 
+	Si n>0 Entonces
+		Repetir
+			Escribir "Por favor, ingrese un número";
+			Leer x;
+			//Solo cuando es la primera vez que se repite el proceso 
+			//Es cuando el número ingresado se guarda en p y g
+			Si i=0 Entonces
+				p<-x;
+				g<-x;
+			SiNo
+				//Cuando ya es la segunda vez que se repite el proceso 
+				//Se evalúa si x, es decir, el nuevo número ingresado
+				//Es menor a p
+				Si x<p Entonces
+					//En caso de que lo sea, ese nuevo valor se guarda en p
+					p<-x;
+				SiNo
+					//Pero si es más grande que g, se guarda en g
+					Si x>g Entonces
+						g<-x;
+					Fin Si
+				Fin Si
+			Fin Si
+			//i va contando las veces en las que la estructura se repite
+			i<-i+1;
+			//Y en acum se van, acumulando los números que se ingresaron
+			acum<-acum+x;
+			//El proceso se va a repetir hasta que el contador llegue a n
+			//O sea, hasta que se llegue a la cantidad de números que se iban a ingresar
+		Hasta Que  i=n;
+		//A todo lo acumulado se divide por la cantidad de números que se ingresó para obtener la media
+		m<-acum/n;
+		Escribir "Mayor: " g ". Menor: " p ". Media: " m;
+    Sino 
+		Escribir "Error. Debe ingresar números";
+	FinSi
+FinAlgoritmo
