@@ -1,0 +1,28 @@
+Algoritmo adivina_numeros
+	Escribir "Programa para que el usuario adivine un número";
+	Definir x, i, a Como Entero;
+	i=0;
+	//Se elige primero el número al azar
+	a=azar(100);
+	Repetir
+		Escribir sin saltar "Adivine el número";
+		Leer x;
+		//Se van contando los intentos
+		i=i+1;
+		//Se ve si el número ingresado es menor, mayor o es el correcto
+		Si x<a Entonces
+			Escribir x " es menor";
+		SiNo
+			Si x>a Entonces
+				Escribir x " es mayor";
+			SiNo
+				Escribir "Número correcto";
+			FinSi
+		Fin Si
+		//El i contará la cantidad de intentos de parte del usuario
+	Hasta Que x=a o i=10;
+	//Solo si se completó la cantidad de intentos y no se adivinó el número se muestra el n+umero aleatorio
+	Si  i=10 y x<>a Entonces
+		Escribir "El número era " a;
+	Fin Si
+FinAlgoritmo
