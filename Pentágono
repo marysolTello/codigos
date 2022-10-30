@@ -1,0 +1,14 @@
+Algoritmo pentagono
+	Escribir "Programa para calcular el área y perímetro de un pentágono";
+	Definir L, a, PM, ar Como Real;
+	Escribir sin saltar "Por favor, ingrese la cantidad de lados";
+	Leer L;
+	Escribir "Ingrese la apotema";
+	Escribir sin saltar "La apotema es la menor distancia entre el centro del pentágono y cualquiera de sus lados";
+	Leer a;
+	//El perímetro se calcula multiplicando sus lados por 5
+	PM<-L*5;
+	//Y el area multiplicando el perímetro por el resto de la apotema dividido en 2
+	ar<-PM*a%2;
+	Escribir "El perímetro es " PM " y el área " ar;
+FinAlgoritmo
