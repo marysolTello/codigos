@@ -1,0 +1,27 @@
+Algoritmo detarea
+	Escribir "Programa para calcular el máximo común divisor de dos números";
+	Definir n1, n2, div1, max Como Entero;
+	Escribir "Por favor, ingresa dos números";
+	Leer n1, n2;
+	//Primero, los npumeros deben ser mayores a 0
+	Si n1>0 y n2>0 Entonces
+		max=1;
+		div1=1;
+		//div tiene que ser menor al segundo número
+		Mientras div1<=n1 Hacer
+			//Se ve si la división entre div y n1 y n2 da 0, o sea, es exacta
+			Si n1 mod div1==0 y n2 mod div1==0 Entonces
+				//Si ese div es mayor que max, el valor se va a guardar en max
+				Si div1>max Entonces
+					max=div1;
+				Fin Si
+			Fin Si
+			//Entonces se le suma 1 a div1
+			//Todo esto se repite siempre y cuando div sea menor a n1
+			div1=div1+1;
+		Fin Mientras
+		Escribir "El máximo común divisor es " max;
+	SiNo
+		Escribir "Debe ingresar números mayores a cero";
+	Fin Si
+FinAlgoritmo
