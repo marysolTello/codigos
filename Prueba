@@ -1,0 +1,11 @@
+Algoritmo Prueba
+	Escribir "Programa para calcular la suma de dos números ingresados";
+	Definir N1, N2, suma Como Entero;
+	Leer N1;
+	Escribir sin saltar "Por favor, ingrese un número";
+	Leer N2;
+	Escribir sin saltar "Por favor, ingrese otro número";
+	//Se realiza la suma de los dos números 
+	suma<-N1+N2;
+	Escribir "	El resultado  de la suma de " N1 " y " N2 " es " suma;
+FinAlgoritmo
