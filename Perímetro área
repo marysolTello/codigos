@@ -1,0 +1,12 @@
+Algoritmo perimetroyarea
+	Escribir "Programa para calcular el perímetro y área de un círculo";
+	Definir r, p, a Como Real;
+	Escribir "Por favor, ingrese el radio del círculo";
+	Leer r;
+	//El perímetro se calcula multiplicando el radio por 2 y por PI
+	//Solo se usan los primeros 4 decimales de PI
+	p<-r*2*3.1416;
+	//El área se calcula elevando el radio al cuadrado y multiplicándolo por PI
+	a<-r^2*3.1416;
+	Escribir "El perímetro de la circunferencia es " p " y el área es " a;
+FinAlgoritmo
