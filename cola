@@ -1,0 +1,116 @@
+Funcion InicializarCola(cola Por Referencia)
+	Definir i Como Entero;
+	//2. La cola se inicializa con un *
+	Para i=0 Hasta 10-1 Hacer
+		cola[i]='*';
+	FinPara
+FinFuncion
+Funcion long=LongitudCola(cola)
+	Definir long Como Entero;
+	long=0;
+	//7. La longitud va a contar la cantidad de cadenas ingresadas
+	//8. No cuenta los espacios que tienen *
+	Mientras long<10 y cola[long]<>'*' Hacer
+		long=long+1;
+	FinMientras
+FinFuncion
+Funcion res=EstaVaciaCola(cola)
+	Definir res Como Logico;
+	//15. Nos fijamos en la longitud de la cola
+	//16. Evalúa como verdadero o falso según si está vacía o no
+	Si LongitudCola(cola)=0 Entonces
+		res=Verdadero;
+	SiNo
+		res=Falso;
+	FinSi
+FinFuncion
+Funcion res=EstaLlenaCola(cola)
+	Definir res Como Logico;
+	//6. Necesitamos ir a la longitud
+	Si LongitudCola(cola)=10 Entonces
+		//9. Según verdadero o falso se muestra si la cola está llena o no
+		res= Verdadero;
+	SiNo
+		res=Falso;
+	FinSi
+FinFuncion
+Funcion AddCola(caden, cola Por Referencia)
+	//5. Hay que ver si la cola está llena o no
+	Si no EstaLlenaCola(cola) Entonces
+		//10. En caso de que NO esté llena
+		//11. La cadena se va a almacenar según el espacio al que corresponda
+		cola(LongitudCola(cola))=caden;
+	SiNo
+		//12. Sino, se muestra que la cola está llena
+		Escribir "Error, la cola está llena";
+	FinSi
+FinFuncion
+Funcion caden=SacarDeLaCola(cola Por Referencia)
+	Definir i Como Entero;
+	Definir caden Como Caracter;
+	//14. Nos fijamos en si la cola está vacía o no
+	Si no EstaVaciaCola(cola) Entonces
+		//17. La palabra que esté en la posición 0 se almacena en caden
+		caden<-cola[0];
+		Para i=0 Hasta 10-2 Hacer
+			//18. El valor que esté en el espacio siguiente a i se almacena en la posición i
+			cola[i]=cola[i+1];
+		FinPara
+		//19. Y al último lugar se le asigna un *
+		cola[10-1]<-"*";
+	SiNo
+		//20. Sino, da error de que la cola no tiene valores
+		Escribir "Error, la cola está vacía";
+		caden=" "; 
+	FinSi
+FinFuncion
+Funcion EscribirCola(cola)
+	Definir i Como Entero;
+	i=0;
+	//23. Se van a ir mostrando las palabras ingresadas menor los *, respetando la dimension del arreglo
+	Mientras i<10 y cola[i]<>'*' Hacer
+		Escribir sin saltar cola[i] " ";
+		i=i+1;
+	FinMientras
+	Escribir " ";
+FinFuncion
+Algoritmo Colaa
+	Escribir "Programa para trabajar con una cola";
+	Definir op Como Entero;
+	Definir vector, linea Como Caracter;
+	Dimension vector[10];
+	//1. Nos vamos a la función para inicializar la cola
+	InicializarCola(vector);
+	Repetir 
+		Escribir "Ingrese la opción";
+		Escribir "Menú";
+		Escribir "1. Añadir elemento a la cola";
+		Escribir "2. Sacar elemento de la cola";
+		Escribir "3. Longitud de la cola";
+		Escribir "4. Mostrar cola";
+		Escribir "5. Salir";
+		Leer op;
+		Segun op Hacer
+			1:
+				//3. Si se introduce una cola
+				Escribir sin saltar "Ingrese la cadena que se introducirá a la cola";
+				Leer linea;
+				//4. Vamos a la función
+				AddCola(linea,vector);
+			2: 
+				//13. Vamos a la funcion sacar cola
+				Escribir SacarDeLaCola(vector);
+			3:
+				//21. La longitud de la cola va a mostrar cuantas palabras hay ingresadas
+				Escribir "Longitud: " LongitudCola(vector);
+			4:
+				//22. Nos vamos a la fucion escribir cola
+				EscribirCola(vector);
+			5: 
+				Escribir "Fin del proceso. Muchas gracias";
+			De Otro Modo:
+				Escribir "Error. Ingrese una de las opciones mostradas";
+		FinSegun
+		//24. La estructura se repite hasta que se ingrese la opción de salir
+	Hasta que op=5;
+FinAlgoritmo
