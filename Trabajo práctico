@@ -1,0 +1,60 @@
+Funcion a<-Llenararreglo (arreglosueldo Por Referencia, nombres)
+	Definir a Como Real;
+	Definir i Como Entero;
+	a=0;
+	Para i<-0 Hasta 10-1 Hacer
+		Escribir sin saltar "Ingrese el sueldo de " nombres[i];
+		Leer arreglosueldo[i];
+		a<-a+arreglosueldo[i];
+	FinPara
+FinFuncion
+Algoritmo tp_practico
+	Definir nombres Como Caracter;
+	Definir sueldo, acum, p Como Real;
+	Definir may, men, op, i Como entero;
+	Dimension sueldo[10], nombres[10];
+	may=0;
+	men=0;
+	Escribir "Programa para trabajar con los sueldos de los empleados";
+	Para i<-0 Hasta 10-1 Hacer
+		Escribir sin saltar "Ingrese el nombre de " i+1 "° empleado";
+		Leer nombres[i];
+	FinPara
+	acum<-Llenararreglo(sueldo, nombres);
+	Repetir 
+		Escribir "Menú";
+		Escribir "Ingrese la opción que desea";
+		Escribir "1. Calcular el sueldo promedio de los sueldos";
+		Escribir "2. Mostrar los sueldos de cada empleado";
+		Escribir "3. Mostrar sueldos mayores al promedio";
+		Escribir "4. Mostrar cantidad de sueldos menores al promedio";
+		Escribir "5. Salir";
+		Leer op;
+		Limpiar Pantalla;
+		Segun op Hacer
+			1: 	p=acum/10;
+				Escribir "El sueldo promedio fue ", p;
+			2: 	Para i<-0 Hasta 10-1 Hacer 
+					Escribir "El sueldo de " nombres[i] " fue de " sueldo[i];
+				FinPara
+			3: Para i<-0 Hasta 10-1 Hacer
+					Si sueldo[i]>p Entonces
+						may<-may+1;
+						Escribir nombres[i] " tiene uno de los sueldos mayores, con " sueldo[i];
+					FinSi
+				FinPara
+				Escribir "Los sueldos mayores al promedio fueron ", may;
+			4: Para i<-0 Hasta 10-1 Hacer
+				Si sueldo[i]<p Entonces
+					men=men+1;
+				FinSi
+			FinPara
+			Escribir "Los sueldos menores al promedio fueron ", men;
+			5: 
+				Escribir "Fin del proceso. Muchas gracias";
+			De Otro Modo:
+				Escribir "Error. Ingrese una de las opciones mostradas";
+		FinSegun
+		Limpiar Pantalla;
+	Hasta que op=5;
+FinAlgoritmo
