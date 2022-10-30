@@ -1,0 +1,14 @@
+Algoritmo cocienteyresiduo
+	Escribir "Programa para mostrar el cociente y residuo de una división";
+	Definir n1, n2, D, r Como Real;
+	Escribir sin saltar "Por favor, ingrese el divisor";
+	Leer n1;
+	Escribir sin saltar "Por favor, ingrese el dividendo";
+	Leer n2;
+	//Se hace la división de los números y se desprecian los decimales
+	D<-trunc(n2/n1);
+	//El resultado se guarda en el resto
+	r<-n2%n1;
+	Escribir "Cociente: " D;
+	Escribir "Residuo: " r;
+FinAlgoritmo
