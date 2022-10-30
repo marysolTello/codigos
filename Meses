@@ -1,0 +1,18 @@
+Algoritmo meses
+	Escribir "Hola. Este es un programa para saber los días de un mes según el número ingresado";
+	Definir n Como Entero;
+	Escribir sin saltar "Ingrese un número del 1 al 12";
+	Leer n;
+	//Compara el número ingresado y se ve a qué mes corresponde para que diga los días
+	Si n=1 o n=3 o n=5 o n=7 o n=8 o n=10 o n=12 Entonces
+		Escribir "El mes tiene 31 días";
+	SiNo
+		Si n=4 o n=6 o n=9 o n=11 Entonces
+			Escribir "El mes tiene 30 días";
+		SiNo
+			Si n=2 Entonces
+				Escribir "El mes tiene 28 o 29 días";
+			FinSi
+		FinSi
+	Fin Si
+FinAlgoritmo
