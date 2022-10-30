@@ -1,0 +1,41 @@
+Algoritmo intervalos
+	Escribir "Programa para calcular el intervalo entre dos límites";
+	Definir li, ls, n, acum, i, c Como real;
+	acum=0;
+	i=0;
+	c=0;
+	Repetir
+		Escribir "Dame el límite inferior y el superior (en ese orden) del intervalo";
+		//Se evalúa la forma en la que se ingresaron lo números
+		Leer li, ls;
+		Si li>ls Entonces
+			Escribir "El límite superior debe ser mayor que el inferior. Volver a ingresar los datos";
+		Fin Si
+	Hasta Que li<ls;
+	Repetir
+		Escribir sin saltar "Por favor, introduzca un número";
+		Leer n;
+		//El número debe ser mayor o igual al li y menor a ls
+		//Eso es para que quede dentro del intervalo
+		Si n>=li y n<ls Entonces
+			//Al acumulador se le va a sumar el número ingresado para sumar todos los números dentro del intervalo
+			acum=acum+n;
+			//Esto es para contar la cantidad de veces que se ingresó un número igual al límite
+			Si n=li Entonces
+				c=c+1;
+			Fin Si
+		SiNo
+			//Y esto para contar los números fuera del intervalo
+			Si n<li o n>ls Entonces
+				i=i+1;
+			SiNo
+				//Cuenta números igual al límite
+				Si n=ls Entonces
+					c=c+1;
+				FinSi
+			Fin Si
+		Fin Si
+		//Hasta que se introduzca un 0
+	Hasta Que n=0;
+	Escribir "La suma de los números que están dentro del intervalo es " acum ". Se introdujeron " i " número/s fuera del intervalo. Y se introdujeron " c " número/s igual/es a los límites del intervalo";
+FinAlgoritmo
