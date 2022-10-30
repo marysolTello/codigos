@@ -1,0 +1,117 @@
+Funcion mayor_menor(may, men)
+	Definir a como Entero;
+	//7. Se hace el intercambio de valores en caso de ser necesario
+	Si may<men Entonces
+		a<-may;
+		may<-men;
+		men<-a;
+	FinSi
+FinFuncion
+Funcion MCD=Calcular_mcd(numero1,numero2)
+	Definir MCD, resto Como Entero;
+	//6. Se verifica cuál es el mayor
+	mayor_menor(numero1,numero2);
+	resto=numero1%numero2;
+	//8. El número 2 se almacena en mcd en caso de ser resto 0
+	//9. Sino se repite el proceso de calcular mcd con el número 2 y el resto obtenido
+	Si resto=0 Entonces
+		MCD=numero2;
+	SiNo
+		MCD=Calcular_mcd(numero2, resto);
+	FinSi
+FinFuncion
+Funcion Leer_fraccion(num Por Referencia,den Por Referencia)
+	//3. Se ingresa el número y denominador
+	Escribir sin saltar "Ingrese el numerador de la fracción";
+	Leer num;
+	Escribir sin saltar "Ingrese el denominador de la fracción";
+	Leer den;
+	//4. Vamos a simplificar
+	Simplificar_fraccion(num,den);
+FinFuncion
+Funcion Simplificar_fraccion(num Por Referencia,den Por Referencia) //el por referencia hace que los valores cambien
+	Definir mcd Como Entero;
+	//5. Se calcula el mcd
+	mcd=Calcular_mcd(num,den);
+	//10. El numerados y denominador se divide por el mcd para obtener la simplificación
+	num=num/mcd;
+	den=den/mcd;
+FinFuncion
+Funcion Escribir_fraccion(num,den)
+	//15. Se ve si la fracción es sobre 1 y cómo se escribirá en cada caso
+	Si den<>1 Entonces
+		Escribir num "/" den;
+	SiNo
+		Escribir num;
+	FinSi
+FinFuncion
+Funcion sumar_fracciones (num1, den1, num2, den2, nr Por Referencia, dr Por Referencia)
+	//14. Se hace el proceso de suma y se simplifica la fracción con los resultados obtenidos
+	nr=(num1*den2)+(den1*num2);
+	dr=(den1*den2);
+	Simplificar_fraccion(nr,dr);
+FinFuncion
+Funcion Restar_fracciones(num1, den1, num2, den2, nr Por Referencia, dr Por Referencia)
+	nr=(num1*den2)-(den1*num2);
+	dr=den1*den2;
+	Simplificar_fraccion(nr,dr);
+FinFuncion
+Funcion Multiplicar_fracciones(num1, den1, num2, den2, nr Por Referencia, dr Por Referencia)
+	nr=num1*num2;
+	dr=den1*den2;
+	Simplificar_fraccion(nr, dr);
+FinFuncion
+Funcion Dividir_fracciones(num1, den1, num2, den2, nr Por Referencia, dr Por Referencia)
+	nr=num1*den2;
+	dr=den1*num2;
+	Simplificar_fraccion(nr, dr);
+FinFuncion
+Algoritmo fracciones
+	Escribir "Programa para realizar diferentes operaciones entre fracciones";
+	Definir n1, d1, n2, d2, op, numr, denr Como Entero;
+	Repetir 
+		Escribir "Menú";
+		Escribir "Ingrese la opción";
+		Escribir "1. Sumar fracciones";
+		Escribir "2. Restar fracciones";
+		Escribir "3. Multiplicar fracciones";
+		Escribir "4. Dividir fracciones";
+		Escribir "5. Salir";
+		Leer op;
+		//1. En caso de que el usuario no quiera salir del programa, se realiza todo el proceso 
+		Si op <> 5 Entonces
+			Escribir "Primera fracción";
+			//2. Vamos a la función 
+			Leer_fraccion(n1,d1);
+			Escribir "Segunda fracción";
+			Leer_fraccion(n2,d2);
+		FinSi
+		Segun op Hacer
+			1:
+				Escribir sin saltar "El resultado de la suma es: ";
+				//12. Se va a la suma de la fracción, y el numr y denr es donde se almacena el resultado de la fracción
+				Sumar_fracciones(n1, d1, n2, d2,numr,denr);
+				//14. De acá vamos a escribir 
+				Escribir_fraccion(numr,denr);
+			2: 
+				Escribir sin saltar "El resultado de la resta es: ";
+				//16. Se repiten los mismo procesos en el resto de las operaciones
+				Restar_fracciones(n1, d1, n2, d2,numr,denr);
+				Escribir_fraccion(numr,denr);
+			3:
+				Escribir sin saltar "El resultado de la multiplicación es ";
+				Multiplicar_fracciones(n1, d1, n2, d2,numr,denr);
+				Escribir_fraccion(numr,denr);
+			4:
+				Escribir sin saltar "El resultado de la división es: ";
+				Dividir_fracciones(n1, d1, n2, d2, numr, denr);
+				Escribir_fraccion(numr,denr);
+			5: 
+				Escribir "Fin del proceso. Muchas gracias";
+			De Otro Modo:
+				//17. Si el usuario ingresa otra opción marca error
+				Escribir "Error. Ingrese una de las opciones mostradas";
+		FinSegun
+		//18. En caso de que se ingrese la opción salir, se termina el proceso, sino se repite
+	Hasta que op=5;
+FinAlgoritmo
