@@ -1,0 +1,22 @@
+Algoritmo agudo_obtuso
+	Escribir "Programa para determinar si un ángulo es agudo u obtuso";
+	Definir ang Como Real;
+	Escribir sin saltar "Por favor, ingrese un ángulo";
+	Leer ang;
+	//Se evalúa la abertura que va a tener el ángulo
+	Si ang>=0 Entonces
+		Si ang<90 Entonces
+			Escribir "El ángulo es agudo";
+		SiNo
+			Si ang>90 Entonces
+				Escribir "El ángulo es obtuso";
+			SiNo
+				Si ang=90 Entonces
+					Escribir "El ángulo es recto";
+				SiNo
+					Escribir "Error. Número negativo";
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+FinAlgoritmo
