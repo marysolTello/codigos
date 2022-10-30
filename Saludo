@@ -1,0 +1,7 @@
+Algoritmo saludo
+	Escribir "Programa para saludar a quien ingrese su nombre";
+	Definir nombre Como Caracter;
+	Escribir sin saltar "Por favor, ingrese su nombre";
+	Leer nombre;
+	Escribir "Hola, " nombre;
+FinAlgoritmo
