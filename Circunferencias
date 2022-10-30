@@ -1,0 +1,35 @@
+Algoritmo circunferencias
+	Definir x1, y1, x2, y2, r1, r2, d Como Real;
+	Escribir "Ingresar los puntos centrales x1, y1, x2, y2 de dos circunferencias";
+	Escribir "Los datos deberán ser ingresados en el orden en que fueron mostrados";
+	Leer x1, y1, x2, y2;
+	Escribir "Ingresar el radio 1 y el radio 2";
+	Escribir "Deberás ingresarlos en el orden en que fueron mostrados";
+	Leer r1, r2;
+	//Se realiza la fórmula de la hipotenusa con la resta de los puntos centrales
+	d=rc((x2-x1)^2+(y2-y1)^2);
+	//Luego se clasifican las circunferencias según el resultado de d
+	Si d>(r1+r2) Entonces
+		Escribir "Las circunferencias son exteriores";
+	SiNo
+		Si d=(r1+r2) Entonces
+			Escribir "Las circunferencias son tangentes exteriores";
+		SiNo
+			Si (r2-r1) < d  y d < (r2+r1) Entonces
+				Escribir "Las circunferencias son secantes";
+			SiNo
+				Si d=(r2-r1) Entonces
+					Escribir "Las circunferencia son tangentes interiores";
+				SiNo
+					Si d<(r2-r1) y d<>0 Entonces
+						Escribir "Las circunferencias son interiores";
+					SiNo
+						Si d=0 Entonces
+							Escribir "Las circunferencias son concéntricas";
+						Fin Si
+					Fin Si
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+FinAlgoritmo
