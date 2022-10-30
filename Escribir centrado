@@ -1,0 +1,24 @@
+Funcion centrar(mi)	
+	Definir i como Entero;
+	//caden tiene la cantidad de caracteres de los mensajes del proceso
+	Para i<-0 hasta (40-(Longitud(mi)/2)) Hacer //con esta función ce centra el mensaje
+		Escribir sin saltar " "; //este espacio hace que el mensaje se vaya corriendo hasta quedar en el centro
+	FinPara
+	Escribir mi;
+	//Imprimo un subrayado con "="
+	//El sin saltar hace que el SIGUIENTE mensaje que aparezca, sea al lado
+	Para i<-0 hasta (40-(Longitud(mi)/2)) Hacer
+		Escribir sin saltar " ";
+	FinPara
+	Para i<-0 hasta (Longitud(mi)-1) Hacer
+		Escribir sin saltar "=";
+	FinPara
+	Escribir ""; //este espacio es para que el mensaje de la ejecución finalizada aparezca abajo, ya que está el sin saltar
+FinFuncion
+Proceso EscribirCentrado
+	Escribir "Programa para escribir un mensaje centrado";
+	Definir m, mi Como Caracter;
+	Escribir sin saltar "Ingrese el mensaje que quiere mostrar";
+	Leer mi;
+	centrar(mi);
+FinProceso
