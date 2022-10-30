@@ -1,0 +1,18 @@
+Algoritmo potencia_sin_exponente
+	Escribir "Programa para calcular la potencia de un número";
+	//El ejercicio pide que se resuelva sin usar el exponente
+	Definir i, e Como Entero;
+	Definir b, p, acum Como Real;
+	Escribir "Ingresar base y exponente";
+	Leer b, e;
+	i=1;
+	//Acum es igual a la base para que se multiplique por sí misma
+	acum=b;
+	Repetir
+		//El contador es parar que se repita el proceso hasta llegue al exponente
+		i=i+1;
+		//La base se multiplica por acum para cumplir con la potencia
+		acum=b*acum;
+	Hasta Que i=e;
+	Escribir "La potencia es " acum;
+FinAlgoritmo
