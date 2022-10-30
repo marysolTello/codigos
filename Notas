@@ -1,0 +1,25 @@
+Algoritmo notas
+	Definir i Como Entero;
+	Definir nota, acum, may, min, m Como Real;
+	Dimension nota[5];
+	acum=0;
+	para i=0 hasta 4 Hacer
+		Escribir sin saltar "Ingrese la nota";
+		Leer nota[i]; //se lee la nota
+		Imprimir "La nota es " nota[i];
+		acum=acum+nota[i]; //se suman la notas
+	FinPara
+	m=acum/5; //Se calcula el promedio
+	may=nota[0]; //en may y min se almacena el valor del primer valor
+	min=nota[0];
+	para i=0 hasta 4 Hacer
+		Si nota[i]>may Entonces //se compara el valor de la posición i con may para saber si es mayor
+			may=nota[i];
+		FinSi
+		Si nota[i]<min Entonces 
+			min=nota[i];
+		FinSi
+	FinPara
+	Imprimir "El promedio de las notas es " m;
+	Escribir "La nota mayor es " may " y la menor " min;
+FinAlgoritmo
