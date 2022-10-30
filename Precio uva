@@ -1,0 +1,27 @@
+Algoritmo precio_uva
+	Escribir "Programa para calcular el precio final de la uva";
+	Definir tipo Como Caracter;
+	Definir tamano Como Entero;
+	Definir pk, pf como real;
+	Escribir sin saltar "Por favor, introduzca el precio por kilo de uva";
+	Leer pk;
+	Escribir sin saltar "Ahora introduzca el tipo y tamaño";
+	Leer tipo, tamano;
+	//Según el tipo y tamaño se va a realizar distintas operaciones para calcular el precio final
+	Si tipo='A' y tamano=1 Entonces
+		pf=pk+0.20;
+	SiNo
+		Si tipo='A' y tamano=2 Entonces
+			pf=pk+0.30;
+		SiNo
+			Si tipo='B' y tamano=1 Entonces
+				pf=pk-0.30;
+			SiNo
+				Si tipo='B' y tamano=2 Entonces
+					pf=pk-0.50;
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	Escribir "El precio final es " pf;
+FinAlgoritmo
