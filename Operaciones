@@ -1,0 +1,38 @@
+Algoritmo operaciones
+	Escribir "Hola, este es un programa que realiza operaciones aritméticas";
+	Definir a, b, op, r Como Real;
+	//El usuario primero va a ingresar los números
+	Escribir sin saltar "Por favor, ingrese dos números";
+	Leer a, b;
+	Escribir "Introduce la opción";
+    Escribir "1. Suma";
+    Escribir "2. Resta";
+    Escribir "3. Multiplicación";
+    Escribir "4. División";
+    Escribir "5. Potenciación";
+	Leer op;
+	//Y según la opción elegida se realiza las operaciones
+	Segun op Hacer
+		1: Escribir "Suma";
+			r<-a+b;
+			Escribir "La suma de " a " + " b " es " r;
+		2: Escribir "Resta";
+			r<-a-b;
+			Escribir "La resta de " a " - " b " es " r;
+		3: Escribir "Multiplicación";
+			r<-a*b;
+			Escribir "La multiplicación de " a " * " b " es " r;
+		4: Escribir "División";
+			Si b=0 Entonces
+				Escribir "Error. No se puede dividir por 0";
+			Sino 
+				r<-a/b;
+				Escribir "La división de " a " / " b " es " r;
+			FinSi
+		5: Escribir "Potenciación";
+			r<-a^b;
+			Escribir a " elevado a " b " es " r;
+		De Otro Modo:
+			Escribir "Error. No corresponde a ninguna de las opciones";
+	FinSegun
+FinAlgoritmo
