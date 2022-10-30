@@ -1,0 +1,73 @@
+Algoritmo ventas_empresa_sucursales
+	Escribir "¡Bienvenido!";
+	Escribir "Este es un programa para calcular la cantidad de ventas de diferentes artículos hechas por una empresa y su recaudación";
+	Definir precios, recaudacions, recaudaciont, may Como Real;
+	Definir i, c, ventas, a, s2, a3s1, s, r Como Entero;
+	Dimension precios[5];
+	Dimension ventas[4,5];
+	Dimension recaudacions[4];
+	//se inicializan diferentes variables que se van a usar a lo largo del código
+	a3s1=0;
+	s2=0;
+	a=0;
+	recaudaciont=0;
+	Escribir "A continuación procederá a ingresar los precios de los artículos";
+	//se guardan en el arreglo los precios de los productos
+	Para i=0 Hasta 5-1 Hacer
+		Escribir sin saltar "Por favor, ingrese el precio del " i+1 "° artículo";
+		Leer precios[i];
+	FinPara
+	Escribir "Ahora ingresará las cantidades de cada artículo vendidas por cada sucursal";
+	Para i=0 Hasta 4-1 Hacer
+		//este se inicializa para que en cada lugar del arreglo empiece de 0;
+		recaudacions[i]=0;
+		//título
+		Escribir i+1 "° sucursal";
+		Para c=0 Hasta 5-1 Hacer
+			//lo inicializo para que no se acumulen los precios de todos los productos y me termine multiplicando mucho más
+			r=0;
+			Escribir sin saltar "Por favor, ingrese la cantidad del " c+1 "° artículo que se vendió en la " i+1 "° sucursal";
+			Leer ventas[i,c];
+			//ese acumulador va a servir para sumar todas las ventas de los artículos
+			a=a+ventas[i,c];
+			//y este, como se inicializa por cada producto, lo uso para multiplicar las ventas por el precio de ese producto 
+			r=r+ventas[i,c];
+			//Esta parte es para mostrar las ventas de la 2da sucursal
+			Si i=1 Entonces
+				s2=s2+ventas[i,c];
+			FinSi
+			//y esta para mostrar las ventas del 3er artículo en la 1ra sucursal
+			Si c=2 y i=0 Entonces
+				a3s1=a3s1+ventas[i,c];
+			FinSi
+			//en el primer lugar del arreglo se va a guardar la multiplicación de las ventas de un producto por su precio y se suma a lo que ya tenía (al inicio 0)
+			recaudacions[i]=recaudacions[i]+(precios[c]*r);
+		FinPara
+	FinPara
+	Escribir "Informamos que:";
+	Escribir "-La cantidad total de artículos vendidos es " a " unidades";
+	Escribir "-La cantidad de ventas de todos los artículos en la sucursal 2 es de " s2;
+	Escribir "-La cantidad de artículo 3 en la sucursal 1 es de " a3s1;
+	//ese es para mostrar las recaudaciones en cada sucursal
+	Para i=0 Hasta 4-1 Hacer
+		Escribir "La cantidad de recaudación de la " i+1 "° sucursal es de " recaudacions[i];
+	FinPara
+	//y aca se suman las recaudaciones para calcular la recaudación total
+	Para i=0 Hasta 4-1 Hacer
+		recaudaciont=recaudaciont+recaudacions[i];
+	FinPara
+	Escribir "La recaudación total de la empresa fue de " recaudaciont;
+	//acá se calcula cuál fue la empresa con mayor recaudación 
+	may=recaudacions[0];
+	Para i=0 hasta 4-1 Hacer
+		Si recaudacions[i]>=may Entonces
+			may=recaudacions[i];
+			s=i;
+		FinSi
+		//esto lo hice así para que no me muestre el mensaje a cada rato y solo lo haga cuando termine de avaluar todo
+		Si i=4-1 Entonces
+			Escribir "La sucursal con mayor recaudacion fue la " s+1 "° con un total de " may;
+		FinSi
+	FinPara
+	Escribir "¡Muchas gracias!";
+FinAlgoritmo
