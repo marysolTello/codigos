@@ -1,0 +1,19 @@
+Algoritmo aceptada_posible
+	Escribir "Este programa sirve para verificar si una persona con cierta edad, nota y sexo es aceptada, posible o no";
+	Definir n Como Real;
+	Definir e Como Entero;
+	Definir sexo Como Caracter;
+	Escribir "Por favor, ingresar nota, edad y sexo";
+	Escribir "Deberá ingresar los datos en el orden dicho";
+	Leer n, e, sexo;
+	//Se analiza si las condiciones se cumplen
+	Si n>=5 y e>=18 y sexo='F' o sexo='f' Entonces
+		Escribir "ACEPTADA";
+	SiNo
+		Si n>=5 y e>=18 y sexo='M' o sexo='m' Entonces
+			Escribir "POSIBLE";
+		SiNo
+			Escribir "NO ACEPTADA";
+		Fin Si
+	Fin Si
+FinAlgoritmo
