@@ -1,0 +1,49 @@
+Algoritmo choferes_kilometros
+	Escribir "Programa para calcular la suma de los kilómetros recorridos por diferentes choferes";
+	Definir c, i, col Como Entero;
+	Definir kilometros, sumakilometros, total_kms Como Real;
+	Definir choferes Como Caracter;
+	Escribir sin saltar "Ingrese la cantidad de choferes que trabajaron en la semana";
+	Leer c;
+	Dimension choferes[c]; //la c es porque el usuario ingresa la cantidad de choferes que son
+	Dimension kilometros[c,7]; //la c es porque según la cantidad de choferes van a ser las filas de la mattriz
+	Dimension total_kms[c]; //acá se guardan los kilómetros totaltes de cada chofer
+	Escribir "Procederemos a ingresan los nombres de los choferes";
+	//se guardan los nombres de los choferes
+	Para i=0 Hasta c-1 Hacer
+		Escribir sin saltar "Ingrese el nombre del " i+1 "° chofer";
+		Leer choferes[i];
+	FinPara
+	Escribir "Ahora vamos a ingresar los kilómetros recorridos por cada chofer";
+	//se guardan los kilómetros de cada chofer según la fila de la matriz, es decir, según el chofer
+	Para i=0 Hasta c-1 Hacer
+		Para col=0 Hasta 7-1 Hacer
+			Escribir sin saltar "Ingrese los kilómetros del chofer " choferes[i] " durante el " col+1 "° día de la semana";
+			Leer kilometros[i,col];
+		FinPara
+	FinPara
+	Escribir "=====================================";
+	Escribir "Suma de los kilómetros de cada chofer";
+	Escribir "=====================================";
+	Para i=0 Hasta c-1 Hacer
+		//inicializo todas las veces el arreglo en cero para que se guarden en la diferentes posiciones la suma de los kilómetros
+		total_kms[i]=0;
+		//escribe el nombre del chofer
+		Escribir sin saltar choferes[i];
+		Escribir sin saltar "= ";
+		Para col=0 Hasta 7-1 Hacer
+			//se van a escribir todos los kilómetros de los choferes según su nombre
+			Escribir sin saltar kilometros[i,col] " km";
+			//con esto muestro si suma o si da el resultado después del dato
+			Si col<(7-1) Entonces
+				Escribir sin saltar " + ";
+			SiNo
+				Escribir sin saltar "= ";
+			FinSi
+			//los kilómetros se van a ir sumando y guardando en el arreglo
+			total_kms[i]=total_kms[i]+kilometros[i,col];
+		FinPara
+		//se van a escribir los kilómetros totales de cada chofer
+		Escribir total_kms[i];
+	FinPara
+FinAlgoritmo
