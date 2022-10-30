@@ -1,0 +1,10 @@
+Algoritmo hipotenusa
+	Escribir "Porgrama para calcular la hipotenusa de un triángulo rectángulo";
+	Definir c1, c2, h Como Real;
+	Escribir "Por favor, ingrese el primer y segundo cateto";
+	Escribir "Deberás ingresarlos en el orden dicho";
+	Leer c1, c2;
+	//Se realiza la fórmula de la hipotenusa
+	h=rc(c1^2+c2^2);
+	Escribir "La hipotenusa del triángulo rectángulo es " h;
+FinAlgoritmo
