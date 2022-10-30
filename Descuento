@@ -1,0 +1,11 @@
+Algoritmo descuento
+	Escribir "Programa para calcular el descuento del precio de un producto";
+	Definir d, pt, pf Como Real;
+	Escribir sin saltar "Por favor, ingrese el precio del producto";
+	Leer pt;
+	//Calculo el procentaje del precio
+	d=15*pt/100;
+	//Y el resultado se lo resto al precio
+	pf=pt-d;
+	Escribir "El precio final con el descuento del 15% es ", pf;
+FinAlgoritmo
