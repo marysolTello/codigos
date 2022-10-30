@@ -1,0 +1,12 @@
+Algoritmo media
+	Escribir "El siguiente programa calculará el promedio o media de tres números";
+	Definir suma, n1, n2, n3 Como Entero;
+	Definir m Como Real;
+	Escribir sin saltar "Por favor, ingrese tres números";
+	Leer n1, n2, n3;
+	//Se suman los valores
+	suma=n1+n2+n3;
+	//Y el resultado se divide por la cantidad de valores ingresados
+	m=suma/3;
+	Escribir "La media de los números ingresados es " m;
+FinAlgoritmo
