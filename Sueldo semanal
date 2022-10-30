@@ -1,0 +1,21 @@
+Algoritmo sueldo_semanal
+	Escribir "Programa para calcular el sueldo semanal de los empleados y el total a pagar de la empresa";
+	Definir ss, sph, ht, dt, pe, n, i Como Entero;
+	Escribir sin saltar "Por favor, ingrese el sueldo por hora";
+	Leer sph;
+	Escribir sin saltar "Por favor, ingrese las horas trabajadas al día";
+	Leer ht;
+	Escribir sin saltar "Por favor, ingrese los días trabajados a la semana";
+	Leer dt;
+	Escribir sin saltar "Por favor, ingrese el número de trabajadores";
+	Leer n;
+	Para i<-0 Hasta n Hacer
+		//Se va a multiplicar el suelod por hora, por las horas trabajadas y los días trabajados
+		//Esto para calcular le sueldo total de cada empleado
+		ss<-sph*ht*dt;
+		//A ese sueldo se lo multiplica por la cantidad de trabajadores para dar lo que tiene que pagar la empresa
+		pe<-ss*n;
+	Fin Para
+	Escribir "Las horas trabajadas por los trabajadores es " ht " y los días trabajados " dt;
+	Escribir "El sueldo semanal de los trabajadores es " ss " y la empresa debe pagar " pe " por todos los trabajadores";
+FinAlgoritmo
