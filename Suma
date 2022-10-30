@@ -1,0 +1,12 @@
+Algoritmo suma
+	Escribir "Programa que te da la suma de 25 números";
+	Definir s, x, i Como Entero;
+	s<-0;
+	Para i<-1 Hasta 25 Hacer
+		Escribir sin saltar "Por favor, ingrese un número";
+		Leer x;
+		//El número ingresado se le suma al acumulador para que se haga la suma de todo
+		s<-s+x;
+	Fin Para
+	Escribir "La suma es " s;
+FinAlgoritmo
