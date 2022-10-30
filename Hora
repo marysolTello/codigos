@@ -1,0 +1,11 @@
+Algoritmo calular_hora
+	Escribir "Programa para calcular las horas y minutos a partir de una cantidad de minutos ingresados";
+	Definir h, m, min Como Real;
+	Escribir sin saltar "Por favor, ingrese los minutos";
+	Leer m;
+	//Se divide y los decimales se desprecian
+	h=trunc(m/60);
+	//Esos decimales, o resto, van a los minutos
+	min=m%60;
+	Escribir m " minutos son " h " horas y " min " minutos";
+FinAlgoritmo
