@@ -1,0 +1,13 @@
+Algoritmo perimetro_area
+	Escribir "Programa para calcular el perímetro y area de un rectángulo";
+	Definir area, perimetro, base, altura Como Real;
+	Escribir sin saltar "Por favor, ingrese la base";
+	Leer base;
+	Escribir sin saltar "Por favor, ingrese la altura";
+	Leer altura;
+	//El perímetro se calcula multiplicando lasuma de la altura y la base por dos
+	perimetro=2*(altura+base);
+	//El área se calcula la base por la altura
+	area=altura*base;
+	Escribir "El perímetro del rectángulo es " perimetro " y su area es " area; 
+FinAlgoritmo
