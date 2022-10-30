@@ -1,0 +1,37 @@
+Algoritmo futbol
+	Escribir "Programa para mostrar los resultados de diferentes partidos de fútbol";
+	Definir equipos Como Caracter;
+	Definir goles, i, c Como Entero;
+	Dimension equipos[15,2], goles[15,2];
+	Para i=0 Hasta 15-1 Hacer
+		//se van ingresando el nombre del equipo y los goles que metió
+		Para c=0 Hasta 2-1 Hacer
+			Escribir sin saltar "Ingrese el nombre del " c+1 "° equipo en el partido " i+1;
+			Leer equipos[i,c];
+			Escribir sin saltar "Ingrese los goles del " c+1 "° equipo en el partido " i+1;
+			Leer goles[i,c];
+		FinPara
+	FinPara
+	Escribir "==========";
+	Escribir "RESULTADOS";
+	Escribir "==========";
+	Para i=0 Hasta 15-1 Hacer
+		Para c=0 Hasta 2-1 Hacer
+			//Esto es para acomoda, va a ir mostrando los equipos que jugaron con un "vs" y va a saltar si termina
+			Si c<>2-1 Entonces
+				Escribir sin saltar equipos[i,c] " vs ";
+			SiNo
+				Escribir equipos[i,c];
+			FinSi
+		FinPara
+		//Abajo muestra los goles de cada uno
+		Para c=0 Hasta 2-1 Hacer
+			Si c<>2-1 Entonces
+				Escribir sin saltar goles[i,c] " - ";
+			SiNo
+				Escribir goles[i,c];
+			FinSi
+		FinPara
+		Escribir "=====";
+	FinPara
+FinAlgoritmo
