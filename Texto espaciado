@@ -1,0 +1,18 @@
+Funcion espacios<-ConvertirEspacios(caden)
+	Definir espacios como Caracter;
+	Definir i como Entero;
+	espacios<-" ";
+	//El concatenar combina dos cadenas
+	Para i<-0 Hasta Longitud(caden) Hacer
+		espacios<-Concatenar(espacios,Subcadena(caden,i,i));
+		espacios<-Concatenar(espacios," ");
+	FinPara
+FinFuncion
+Algoritmo textoespaciado
+	Escribir "Programa que muestra una cadena con espacios";
+	Definir m Como Caracter;
+	Escribir Sin Saltar "Introduce una cadena:";
+	Leer m;
+	Escribir "La cadena con espacio:";
+	Escribir ConvertirEspacios(m);
+FinAlgoritmo
