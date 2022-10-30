@@ -1,0 +1,24 @@
+Algoritmo matriz_diagonal
+	Escribir "Programa para mostrar una diagonal en una matriz";
+	Definir diagonal, i, c, conta, a Como Entero;
+	Dimension diagonal[5,5];
+	Escribir "Diagonal hecha de 0 y 1";
+	Escribir "=======================";
+	//Ambos paras son para que se introduzcan los valores en la matriz
+	Para i=0 hasta 5-1 Hacer
+		Para c=0 hasta 5-1 Hacer 
+			Si i=c Entonces //si los contadores están iguales se va a poner un 1
+				diagonal[i,c]=1;
+			SiNo
+				diagonal[i,c]=0; //sino, se pone un 0
+			FinSi
+			Si c<>4 Entonces //si los valores están antes de que se complete la fila
+			//se escriben los valores uno al lado de otro con un espacio
+				Escribir sin saltar diagonal[i,c] " ";
+			SiNo
+			//sino se empieza a escribir abajo
+				Escribir diagonal[i,c];
+			FinSi
+		FinPara
+	FinPara
+FinAlgoritmo
