@@ -1,0 +1,41 @@
+Algoritmo dado
+	Escribir "Programa para saber el número opuesto en un dado";
+	Definir seis, cinco, cuatro, tres, dos, uno Como Caracter;
+	Definir n Como Entero;
+	Escribir sin saltar "Por favor, ingresar resultado del dado";
+	Leer n;
+	seis='seis';
+	cinco= 'cinco';
+	cuatro='cuatro';
+	tres='tres';
+	dos='dos';
+	uno='uno';
+	//Simplemente se ve cuál es la cara opuesta de un dado en letras
+	Si n=1 Entonces
+		Escribir "En la cara opuesta está el " seis;
+	SiNo
+		Si n=2 Entonces
+			Escribir "En la cara opuesta está el " cinco;
+		SiNo
+			Si n=3 Entonces
+				Escribir "En la cara opuesta está el " cuatro;
+			SiNo
+				Si n=4 Entonces
+					Escribir "En la cara opuesta está el " tres;
+				SiNo
+					Si n=5 Entonces
+						Escribir "En la cara opuesta está el " dos;
+					SiNo
+						Si n=6 Entonces
+							Escribir "En la cara opuesta está el " uno;
+						SiNo
+							Si n<1 o n>6 Entonces
+								Escribir "Error";
+							FinSi
+						FinSi
+					FinSi
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+FinAlgoritmo
