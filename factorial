@@ -1,0 +1,20 @@
+Funcion fac=FACTO(n)
+	Definir fac, i Como Entero;
+	i=0;
+	fac=1;
+	//se van multiplicando los número hasta llegar al ingresado
+	Repetir
+		i=i+1;
+		fac=fac*i;
+	Hasta Que i=n;
+FinFuncion
+Algoritmo factorial
+	Escribir "¡Hola! Bienvenido";
+	Escribir "Este es un programa para calcular el factorial de un número";
+	Definir n, acum Como Entero;
+	Escribir sin saltar "Por favor, ingrese el número del cual desea saber su factorial";
+	Leer n;
+	acum=FACTO(n);
+	Escribir "El factorial de " n " es " acum;
+	Escribir "¡Muchas gracias!";
+FinAlgoritmo
