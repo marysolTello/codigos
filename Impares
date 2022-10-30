@@ -1,0 +1,12 @@
+Algoritmo impares
+	Escribir "Programa que imprime impares de 7 al 52";
+	Definir i Como Entero;
+	//Como queremos iniciar en 7, así iniciamos el contador
+	i=7;
+	//52 es par, por eso porngo hasta 51
+	Mientras i<=51 Hacer
+		//i se va escribiendo y se va sumado números
+		Escribir i;
+		i<-i+2;
+	Fin Mientras
+FinAlgoritmo
