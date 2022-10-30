@@ -1,0 +1,19 @@
+Algoritmo dinero_euros
+	Escribir "Programa para calcular el dinero que tienes";
+	Definir m50, m20, m10, m2, m1 como entero;
+	Definir d Como Real;
+	Escribir "A continuación, ingresarás la cantidad de monedas que tienes de cada una";
+	Escribir sin saltar "Ingrese la cantidad de monedas de 2 euros";
+	Leer m2;
+	Escribir sin saltar "Ingrese la cantidad de monedas de 1 euro";
+	Leer m1;
+	Escribir sin saltar "Ingrese la cantidad de monedas de 50 céntimos";
+	Leer m50;
+	Escribir sin saltar "Ingrese la cantidad de monedas de 20 céntimos";
+	Leer m20;
+	Escribir sin saltar "Ingrese la cantidad de monedas de 10 céntimos";
+	Leer m10;
+	//Lon céntimos se multiplican por sus cantidades de monedas y se les suman las monedas de 1 euro
+	d=(m50*0.50)+(m20*0.20)+(m10*0.10)+(m2*2)+m1;
+	Escribir "La cantidad de dinero es " d " euros";
+FinAlgoritmo
