@@ -1,0 +1,24 @@
+Algoritmo Potencia
+	Escribir "Programa para realizar una operación de potencia";
+	Definir b, e, p Como Real;
+	Escribir sin saltar "Por favor, ingrese la base";
+	Leer b;
+	Escribir sin saltar "Por favor, ingrese el exponente";
+	Leer e;
+	//Se realiza la operación de potenciación
+	p=b^e;
+	Si e>0 Entonces
+		Escribir "La potencia es " p;
+	SiNo
+		Si e=0 Entonces
+			Escribir "La potencia es 1";
+		SiNo
+			Si e<0 Entonces
+				//En caso de que el exponente sea negativo
+				//Se divide 1 entre el número base, y se lo pone como su valor absoluto
+				//Entonces los decimales no aparecen
+				Escribir "La potencia es 1/" 1/(abs(p));
+			Fin Si
+		Fin Si
+	Fin Si
+FinAlgoritmo
