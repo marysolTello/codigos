@@ -1,0 +1,27 @@
+Algoritmo suma_vectores
+	//Este lo hice otras veces
+	//Ingresa los valores en ambos arreglos
+	//Y después en las posiciones se van sumando
+	Escribir "Programa para que el usuario ingrese valores en dos arreglos";
+	Escribir "Los números ingresados se sumarán";
+	Definir vector1, vector2, vector3, i Como Entero;
+	Dimension vector1[5];
+	Dimension vector2[5];
+	Dimension vector3[5];
+	Escribir "Primer vector";
+	Para i=0 hasta 4 hacer
+		Escribir sin saltar "Ingrese un número. Posición " i+1;
+		Leer vector1[i];
+	FinPara
+	Escribir "Segundo vector";
+	Para i=0 hasta 4 hacer
+		Escribir sin saltar "Ingrese un número. Posición " i+1;
+		Leer vector2[i];
+	FinPara
+	Para i=0 hasta 4 hacer
+		vector3[i]=vector1[i]+vector2[i];
+	FinPara
+	Para i=0 hasta 4 Hacer
+		Escribir "La suma del arreglo en la posición " i+1 " es " vector3[i];
+	FinPara
+FinAlgoritmo
