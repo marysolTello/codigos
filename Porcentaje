@@ -1,0 +1,11 @@
+Algoritmo porcentaje
+	Escribir "Programa que calcula cierto porcentaje de una cantidad ingresada";
+	Definir c, p, t Como Real;
+	Escribir sin saltar "Por favor, introduce la cantidad que corresponde al 100%";
+	Leer c;
+	Escribir sin saltar "Por favor, introduce el porcentaje que desea obtener";
+	Leer p;
+	//Se realiza la cuenta para calcular el porcentaje
+	T<-c*p/100;
+	Escribir "El porcentaje de ", c, "es ", t;
+FinAlgoritmo
