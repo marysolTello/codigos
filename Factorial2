@@ -1,0 +1,15 @@
+Algoritmo factorial
+	Escribir "Programa para calcular el factorial de un número";
+	Definir n, i, acum Como Entero;
+	Escribir sin saltar "Por favor, ingrese un número";
+	Leer n;
+	i=0;
+	acum=1;
+	Repetir
+		//A i se le suma 1 y se lo multiplica por el acumulador, que va a ir acumulando los resultados
+		i=i+1;
+		acum=acum*i;
+		//Esto se repite hasta que llegue al número ingresado
+	Hasta Que i=n;
+	Escribir "El factorial de " n " es " acum;
+FinAlgoritmo
