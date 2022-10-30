@@ -1,0 +1,17 @@
+Algoritmo deprueba
+	Escribir "Programa para que se ingresen números del 0 al 9, los sume y dé la media";
+	Definir arreglo, i, a Como Entero;
+	Definir m Como Real;
+	Dimension arreglo[10];
+	Escribir sin saltar "Flaco, poné 10 números entre 0 y 9";
+	a=0;
+	//La estructura hace que el arreglo se llene con los números ingresados
+	Para i=0 hasta 9 hacer
+		Leer arreglo[i];
+		//Además, los números ingresados se van sumando
+		a=a+arreglo[i];
+	FinPara
+	//La suma se divide en la cantidad de números ingresados
+	m=a/10;
+	Escribir "La suma del arreglo es " a " y la media es " m;
+FinAlgoritmo
