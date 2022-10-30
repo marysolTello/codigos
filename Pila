@@ -1,0 +1,111 @@
+Funcion InicializarPila(mipila Por Referencia)
+	Definir i Como Entero;
+	//2. La pila se inicializa con un *
+	Para i=0 Hasta 10-1 Hacer
+		mipila[i]='*';
+	FinPara
+FinFuncion
+Funcion long=LongitudPila(mipila)
+	Definir long Como Entero;
+	long=0;
+	//7. La longitud va a contar la cantidad de cadenas ingresadas
+	//8. No cuenta los espacios que tienen *
+	Mientras long<10 y mipila[long]<>'*' Hacer
+		long=long+1;
+	FinMientras
+FinFuncion
+Funcion res=EstaVaciaPila(mipila)
+	Definir res Como Logico;
+	//15. Nos fijamos en la longitud de la pila
+	//16. Evalúa como verdadero o falso según si está vacía o no
+	Si LongitudPila(mipila)=0 Entonces
+		res=Verdadero;
+	SiNo
+		res=Falso;
+	FinSi
+FinFuncion
+Funcion res=EstaLlenaPila(mipila)
+	Definir res Como Logico;
+	//6. Necesitamos ir a la longitud
+	Si LongitudPila(mipila)=10 Entonces
+		//9. Según verdadero o falso se muestra si la pila está llena o no
+		res= Verdadero;
+	SiNo
+		res=Falso;
+	FinSi
+FinFuncion
+Funcion AddPila(caden, mipila Por Referencia)
+	//5. Hay que ver si la pila está llena o no
+	Si no EstaLlenaPila(mipila) Entonces
+		//10. En caso de que NO esté llena
+		//11. La cadena se va a almacenar según el espacio al que corresponda
+		mipila(LongitudPila(mipila))=caden;
+	SiNo
+		//12. Sino, se muestra que la pila está llena
+		Escribir "Error, la pila está llena";
+	FinSi
+FinFuncion
+Funcion caden=SacarDeLaPila(mipila Por Referencia)
+	Definir caden Como Caracter;
+	//14. Nos fijamos en si la pila está vacía o no
+	Si no EstaVaciaPila(mipila) Entonces
+		//17. A la longitud de la pila se le resta un lugar y se almacena en cadena
+		caden<-mipila[LongitudPila(mipila)-1];
+		//18. A ese lugar se le asigna un *
+		mipila[LongitudPila(mipila)-1]<-"*";
+	SiNo
+		//19. Sino, da error de que la pila no tiene valores
+		Escribir "Error, la pila está vacía";
+		caden=" "; 
+	FinSi
+FinFuncion
+Funcion EscribirPila(mipila)
+	Definir i Como Entero;
+	i=0;
+	//22. Se van a ir mostrando las palabras ingresadas menor los *, respetando la dimension del arreglo
+	Mientras i<10 y mipila[i]<>'*' Hacer
+		Escribir sin saltar mipila[i] " ";
+		i=i+1;
+	FinMientras
+	Escribir " ";
+FinFuncion
+Algoritmo Pila
+	Escribir "Programa para trabajar con una pila";
+	Definir op Como Entero;
+	Definir vector, linea Como Caracter;
+	Dimension vector[10];
+	//1. Nos vamos a la función para inicializar la pila
+	InicializarPila(vector);
+	Repetir 
+		Escribir "Ingrese la opción";
+		Escribir "Menú";
+		Escribir "1. Añadir elemento a la pila";
+		Escribir "2. Sacar elemento de la pila";
+		Escribir "3. Longitud de la pila";
+		Escribir "4. Mostrar pila";
+		Escribir "5. Salir";
+		Leer op;
+		Segun op Hacer
+			1:
+				//3. Si se introduce una pila 
+				Escribir sin saltar "Ingrese la cadena que se introducirá a la pila";
+				Leer linea;
+				//4. Vamos a la función
+				AddPila(linea,vector);
+			2: 
+				//13. Vamos a la funcion sacar pila
+				Escribir SacarDeLaPila(vector);
+			3:
+				//20. La longitud de la pila va a mostrar cuantas palabras hay ingresadas
+				Escribir "Longitud: " LongitudPila(vector);
+			4:
+				//21. Nos vamos a la fucion escribir pila
+				EscribirPila(vector);
+			5: 
+				Escribir "Fin del proceso. Muchas gracias";
+			De Otro Modo:
+				Escribir "Error. Ingrese una de las opciones mostradas";
+		FinSegun
+		//23. La estructura se repite hasta que se ingrese la opción de salir
+	Hasta que op=5;
+FinAlgoritmo
