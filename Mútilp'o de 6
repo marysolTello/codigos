@@ -1,0 +1,14 @@
+Algoritmo multiplo_de_6
+	Escribir "¡Hola!";
+	Escribir "Programa para comparar si un número es múltiplo de 6";
+	Definir n Como Entero;
+	Escribir sin saltar "Por favor, ingrese un número";
+	Leer n;
+	Si n mod 6=0 Entonces
+		Escribir n, " es múltiplo de 6";
+	SiNo
+		Si n mod 6<>0 Entonces
+			Escribir n, " no es múltiplo de 6";
+		FinSi
+	FinSi
+FinAlgoritmo
