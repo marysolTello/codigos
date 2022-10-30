@@ -1,0 +1,19 @@
+Algoritmo cambio
+	Escribir "Programa para calcular el cambio que deberá darse a un cliente";
+	Definir D, M, C, F Como Real;
+	Escribir sin saltar "Costo del producto:";
+	Leer C;
+	Escribir sin saltar "Dinero entregado por el cliente:";
+	Leer D;
+	//En caso se que el dinero sea mayor al costo del producto, se restan para averiguar lo que sobra
+	//Eso será el cambio
+	Si D>=C Entonces
+		M<-D-C;
+		Escribir "El cambio es " M;
+	SiNo
+		//En caso de que el dinero entregado no sea mayor al costo
+		//Se resta al costo el dinero y da el dinero faltante
+		F<-C-D;
+		Escribir "Falta " F;
+	Fin Si
+FinAlgoritmo
