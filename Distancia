@@ -1,0 +1,9 @@
+Algoritmo distancia
+	Escribir "Programa para calcular la distancia entre dos números";
+	Definir r, n1, n2 Como Entero;
+	Escribir "Por favor, introduzca dos números";
+	Leer n1, n2;
+	//Abs lo que hace es calcular el número sin tomar en cuenta si es negativo o decimal
+	r=abs(n1-n2);
+	Escribir "La distancia entre " n1 " y " n2 " es " r;
+FinAlgoritmo
