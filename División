@@ -1,0 +1,15 @@
+Algoritmo division
+	Escribir "Programa que realiza una divisón entre dos números";
+	Definir n1, n2, d Como Real;
+	Escribir sin saltar "Por favor, ingrese un número";
+	Leer n1;
+	Escribir sin saltar "Por favor, ingrese otro número";
+	Leer n2;
+	//Para que la divisón se realice n2 no tiene que ser 0
+	Si n2<>0 Entonces
+		d=n1/n2;
+		Escribir "El resultado de la división de " n1 " y " n2 " es " d;
+	SiNo
+		Escribir "Error. No se puede dividir entre 0";
+	Fin Si
+FinAlgoritmo
