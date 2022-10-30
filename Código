@@ -1,0 +1,14 @@
+Algoritmo primerarreglo
+	Escribir "Programa para ingresar datos en un arreglo y ver el dato es una posición"; 
+	Definir arreglo1, i, a, p Como Entero;
+	Dimension arreglo1[10]; //Primero le doy la dimensión al vector
+	Para i=0 hasta 9 hacer
+		//Después hago que ingrese números hasta que se llene el vector
+		Escribir sin saltar "Ingrese 10 números entre 0 y 9";
+		Leer arreglo1[i];
+	FinPara
+	//Después me muestra la posición para yo darle el dato
+	Escribir sin saltar "Ingrese la posición que desea ver";
+	Leer p;
+	Imprimir arreglo1[p];
+FinAlgoritmo
