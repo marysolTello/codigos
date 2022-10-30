@@ -1,0 +1,17 @@
+Algoritmo intercambiodevalores
+	Escribir "Programa para introducir dos valores en dos variables e intercambiarlos";
+	Definir A, B, AB Como Entero;
+	Escribir sin saltar "Por favor, ingrese el número en la variable A";
+	Leer A;
+	Escribir sin saltar "Por favor, ingrese el número en la variable B";
+	Leer B;
+	//Se produce el intercambio de valores
+	//Se usa otra variable para ayudar al intercambio
+	//A se guarda en AB
+	AB=A;
+	//B se guarda en A
+	A=B;
+	//Y AB se guarda en B
+	B=AB;
+	Escribir B " se guardó en la variable B y " A " se guardó en la variable A";
+FinAlgoritmo
