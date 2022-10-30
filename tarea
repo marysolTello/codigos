@@ -1,0 +1,43 @@
+Algoritmo arreglo_tarea
+	//Este programa sirve para darle una dimensión a un arreglo que la va a elegir el usuario
+	//Los valores del arreglo van a ser aleatorios
+	//Después se elije la operacipon que se quiere hacer entre dos de los valores
+	Escribir "Programa para llenar un arreglo y realizar operaciones";
+	Definir arreglo, x, i, op, p1, p2 Como Entero;
+	Escribir sin saltar "Por favor, ingrese cuántos valores va a tener el arreglo";
+	Leer x;
+	Dimension arreglo[x];
+	//Se rellena el arreglo con la dimensión el usuario en valores aleatorios de 1 al 100
+	Para i=0 Hasta x-1 Hacer
+		Arreglo[i]=Aleatorio(1,100);
+	FinPara
+	//Se muestra el arreglo
+	Para i=0 Hasta x-1 Hacer
+		Escribir sin saltar arreglo[i] ",  ";
+	FinPara
+	Escribir "¡Muy bien! Ahora vamos al menú";
+	Escribir "Ingrese una opción";
+	Escribir "1. Suma";
+	Escribir "2. Resta";
+	Escribir "3. Multiplicación";
+	Escribir "4. División";
+	//Se crea un repetir por si el usuario ingresa una opción incorrecta
+	Repetir
+		Leer op;
+		Si op<1 o op>4 Entonces 
+			Escribir "Por favor, ingrese una de las opciones mostradas";
+		FinSi
+	Hasta Que op=1 o op=2 o op=3 o op=4;
+	Escribir sin saltar "Ingrese la posición del primer número";
+	Leer p1;
+	Escribir sin saltar "Ingrese la posición del segundo número";
+	Leer p2;
+	//Se suman las posiciones ingresadas
+	Segun op Hacer
+		1: Mostrar "La suma es " arreglo[p1-1]+arreglo[p2-1];
+		2: Mostrar "La resta es " arreglo[p1-1]-arreglo[p2-1];
+		3: Mostrar "La multiplicación es " arreglo[p1-1]*arreglo[p2-1];
+		4: Mostrar "La división es " arreglo[p1-1]/arreglo[p2-1];
+	FinSegun
+	Escribir "¡Muchas gracias!";
+FinAlgoritmo
