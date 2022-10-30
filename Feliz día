@@ -1,0 +1,71 @@
+funcion Corazon(Cora Por Referencia)
+	Definir i, j, k Como Entero;
+	//Hago que el arreglo se llene de * o espacios de forma que forme el corazón
+	Para i=0 Hasta 6-1 Hacer
+		Para j=0 Hasta 9-1 Hacer
+			Si i=0 Entonces
+				Si j=1 o j=2 o j=3 o j=5 o j=6 o j=7
+					Cora[i,j]='*';
+				SiNo
+					Cora[i,j]=' ';
+				FinSi
+			FinSi
+			Si i=1 Entonces
+				Cora[i,j]='*';
+			FinSi
+			Si i=2 Entonces
+				Si j=1 o j=2 o j=3 o j=4 o j=5 o j=6 o j=7 Entonces
+					Cora[i,j]='*';
+				SiNo
+					Cora[i,j]=' ';
+				FinSi
+			FinSi
+			Si i=3 Entonces
+				Si j=2 o j=3 o j=4 o j=5 o j=6 Entonces
+					Cora[i,j]='*';
+				SiNo
+					Cora[i,j]=' ';
+				FinSi
+			FinSi
+			Si i=4 Entonces
+				Si j=3 o j=4  o j=5 Entonces
+					Cora[i,j]='*';
+				SiNo
+					Cora[i,j]=' ';
+				FinSi
+			FinSi
+			Si i=5 Entonces
+				Si j=4 Entonces
+					Cora[i,j]='*';
+				SiNo
+					Cora[i,j]=' ';
+				FinSi
+			FinSi
+		FinPara
+	FinPara
+	Para i=0 Hasta 6-1 Hacer
+		Para j=0 Hasta 9-1 Hacer
+			//Por cada * se va a introducir un espacio entre medio
+			Para k=0 Hasta (1-(Longitud(Cora[i,j])/2)) Hacer
+				Escribir sin saltar " ";
+			FinPara
+			Escribir sin saltar Cora[i,j];
+		FinPara
+		Escribir " ";
+	FinPara
+FinFuncion
+Funcion Programador(cad)
+	Definir i Como Entero;
+	Escribir cad;
+	Para i=0 Hasta Longitud(cad)-1 Hacer
+		Escribir sin saltar "=";
+	FinPara
+	Escribir " ";
+FinFuncion
+Algoritmo FelizDia
+	Definir cad, arreglo Como Caracter;
+	Dimension arreglo[6,9];
+	cad="¡Feliz día del estudiante!";
+	Programador(cad);
+	Corazon(arreglo);
+FinAlgoritmo
