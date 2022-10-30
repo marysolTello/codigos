@@ -1,0 +1,24 @@
+Algoritmo mayor_numero
+	Escribir "¡Bienvenido!";
+	Escribir "Este es un programa para indicar el mayor número entre 4 ingresados";
+	Definir a, b, c, d Como Entero;
+	Escribir sin saltar "Por favor, ingrese cuatro números";
+	Leer a, b, c, d;
+	Escribir sin saltar "El mayor es: ";
+	//Compara los valores ingresados para verificar cuál es el mayor
+	Si a>b y a>c y a>d Entonces
+		Escribir a;
+	SiNo
+		Si b>a y b>c y b>d Entonces
+			Escribir b;
+		SiNo
+			Si c>a y c>b y c>d Entonces
+				Escribir c;
+			SiNo
+				Si d>a y d>b y d>c Entonces
+					Escribir d;
+				FinSi
+			FinSi
+		FinSi
+	FinSi
+FinAlgoritmo
