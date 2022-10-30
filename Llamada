@@ -1,0 +1,45 @@
+Algoritmo llamada
+	Escribir "¡Bienvenido!";
+	Escribir "Este es un programa para calcular el precio de una llamada";
+	Definir m, pl, mr, pp, pt Como Real;
+	Definir momento, d Como Caracter;
+	Escribir sin saltar "Por favor, ingrese los minutos de la llamada";
+	Leer m;
+	Escribir sin saltar "Ingrese el día de la llamada (lu, ma, mie, jue, vie, sa, dom)";
+	Leer d;
+	Escribir sin saltar "Ingrese si la llamada se hizo a la mañana (M, 7 h a 12 h) o a la tarde (T, 17 h a 21 h)";
+	Leer momento;
+	Si m<=5 Entonces //si los minutos son menores o iguales a 5
+		pl<-1*m; //cada minuto cuesta 1 euro
+	SiNo
+		Si m<=8 Entonces //si los minutos son menores o iguales a 8
+			mr<-m-5; //les resto los primeros 5 minutos para que no me los cuente de nuevo
+			pl<-5+(mr*0.80); //multiplico los minutos que me quedaron por 0.80 y le sumo lo que costaron los primeros 5 minutos
+		SiNo
+			Si m<=10 Entonces //si los minutos son menores o iguales a 10
+				mr<-m-8; //le resto los primeros 8 minutos para que no me los cuente de nuevo
+				pl<-5+2.40+(mr*0.70); //multiplico los minutos que me quedaron por 0.70 y le sumo lo que costaron los minutos anteriores
+			SiNo
+				Si m>10 Entonces //si los minutos son mayores a 10
+					mr<-m-10; //le resto los primeros 10 minutos para queno me los cuente de nuevo
+					pl<-5+2.40+1.40+(mr*0.50); //multiplico los minutos que me quedaron por 0.50 y le sumo lo que costaron los minutos anteriores
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+	Si d='lu' o d='ma' o d='mie' o d='jue' o d='vie' o d='sa'  Entonces //toma en cuenta si el día es de lunes a sábado
+		Si momento='M' o momento='m' Entonces //toma en cuenta mayúsculas y minúsculas de la mañana
+			pp=pl*100/15; //al precio que me quedó de la llamada le calculo el 15 %
+		SiNo
+			Si momento='T' o momento='t' Entonces; //toma en cuenta mayúsculas y minúsculas de la tarde
+				pp=pl*100/10; //al precio que me quedó de la llamada le calculo el 10 %
+			FinSi
+		FinSi
+	SiNo
+		Si d='dom' o d='Dom' Entonces //toma en cuenta si el día es domingo
+			pp=pl*100/3; //al precio que me quedó de la llamada le calculo el 3 %
+		Fin Si
+	Fin Si
+	pt=pp+pl; //sumo el precio de la llamda con el porcentaje por el día y eso me da el precio total
+	Escribir "El precio de la llamada es " pt;
+FinAlgoritmo
