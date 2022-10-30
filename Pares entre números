@@ -1,0 +1,32 @@
+Algoritmo pares_entre_numeros
+	Escribir "Programa que muestra los números pares entre dos número ingresados";
+	Definir n1, n2 Como Entero;
+	Escribir "Ingrese dos números";
+	Leer n1, n2;
+	Repetir
+		//Se ve si el primer número es mayor que el segundo
+		Si n1>n2 Entonces
+			//Siendo así, al segundo número se le suma 1
+			n2=n2+1;
+			//Y se ve si ese número, resultado de la suma, es par
+			//O sea, se divide al número entre dos y el resultado debe ser exacto
+			Si n2 mod 2=0 Entonces
+				//En caso se que esa condición se cumpla, se muestra en pantalla
+				Imprimir n2;
+			FinSi
+		Sino
+			//En caso de que el primer número sea menor que el segundo
+			//Se hace el mismo procedimiento pero con el primer número
+			Si n1<n2 Entonces
+				n1=n1+1;
+				Si n1 mod 2=0 Entonces
+					Imprimir n1;
+				FinSi
+			SiNo
+				//Pero no se hace nada en caso de que los números sean iguales
+				Escribir "Los número son iguales";
+			FinSi
+		FinSi
+		//Todo este procedimiento se hace hasta que los dos número se igualen
+	Hasta Que n1=n2;
+FinAlgoritmo
