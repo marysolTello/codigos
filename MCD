@@ -1,0 +1,50 @@
+Funcion mayor_menor(may, men)
+	//9. Y volamos para acá
+	//10. Definimos una variable a que no está en el título
+	Definir a como Entero;
+	//11. Se crea una condición que se hará en caso de que may sea menor que men
+	//12. Sino no se hace nada
+	Si may<men Entonces
+		//13. En caso de que may sea menor, su valor se guarda en la variable a
+		a<-may;
+		//14. El valor de men se guarda en may
+		may<-men;
+		//15. Y lo que hay en a, que era el número menor, se guarda en men
+		men<-a;
+		//16. Y así se intercambian los valores
+	FinSi
+FinFuncion
+Funcion mcd <- mayorcomundivisor(num1,num2)
+	//4. Entonces nos venimos para acá
+	//5. Los valores de n1 y n2 pasan a num1 y num2
+	//6. La variable en donde se almacena el resultado de la función debe definirse
+	//7. Así como toda variable que no esté en el título
+	Definir mcd, resto Como Entero;
+	//8. Se llama a la segunda función donde se calculará cuál de los dos números es el mayor
+	mayor_menor(num1,num2);
+	//17. Volvemos acá
+	//18. Según los datos de las variables, se divide el mayor por el menor y se calcular el resto
+	resto<-num1%num2;
+	//19. En caso de que el resto sea 0, ese es el mcd
+	Si resto=0 Entonces 
+		mcd<-num2;
+	SiNo
+		//20. Sino, se respite todo el proceso anterior con el segundo número y el resto obtenido hasta obtener un entero
+		//21. Por eso se vuelve a llamar a la primera función
+		mcd<-mayorcomundivisor(num2,resto);
+	FinSi
+FinFuncion
+Algoritmo MCD_mcd
+	Escribir "¡Hola! Bienvenido/a a este programa en donde calcularemos el mayor común divisor entre dos números";
+	Definir n1,n2, MCD como Entero;
+	//1. primero se ingresan los números de los cuales se va a buscar el mcd
+	Escribir Sin Saltar "Por favor, ingrese el primer número";
+	Leer n1;
+	Escribir Sin Saltar "Por favor, ingrese el segundo número";
+	Leer n2;
+	//2. acá se llama a la función que calcula el MCD
+	//3. MCD es donde se guardará el resultado, y se manda el valor de n1, n2
+	MCD=mayorcomundivisor(n1,n2);
+	//22. Por último, se muestra el resultado guardado en mcd
+	Escribir "El mayor común divisor entre " n1 " y " n2 " es " MCD;
+FinAlgoritmo
