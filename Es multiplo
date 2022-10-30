@@ -1,0 +1,17 @@
+Funcion multip(n1, n2)
+	Definir n Como Real;
+	//A continuación se dividen los números para saber si son múltiplos
+	//El resto de la división debe ser 0
+	Si n1 mod n2=0 Entonces 
+		Escribir n1 " es múltiplo de " n2;
+	SiNo 
+		Escribir "No son múltiplos";
+	FinSi
+FinFuncion
+Algoritmo EsMultiplo
+	eSCRIBIR "Program para verificar si dos números ingresados son múltiplos";
+	Definir numero1, numero2 Como Entero;
+	Escribir "Ingrese dos números";
+	Leer numero1, numero2;
+	multip(numero1, numero2);
+FinAlgoritmo
