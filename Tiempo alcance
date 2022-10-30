@@ -1,0 +1,15 @@
+Algoritmo tiempo_alcance
+	Escribir "Programa para calcular el tiempo de alcance de un vehículo";
+	Definir t, d, v1, v2, m Como Real;
+	Escribir sin saltar "¿Cuál es la distancia entre los dos vehículos?";
+	Leer d;
+	Escribir sin saltar "¿Cuál es la velocidad del vehículo que está adelante?";
+	Leer v2;
+	Escribir sin saltar "¿Cuál es la velocidad del vehículo que está detrás?";
+	Leer v1;
+	//El tiempo se calcula dividiendo la distancia entre la resta de la velocidad del primer vehículo menos el segundo
+	t<-d/(v1-v2);
+	//El resultado obtenido se multiplica por 60 para que dé la cantidad de minutos
+	m<-t*60;
+	Escribir "El tiempo de alcance es " m " minutos.";
+FinAlgoritmo
