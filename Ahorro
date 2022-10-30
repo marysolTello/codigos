@@ -1,0 +1,13 @@
+Algoritmo ahorro
+	Escribir "Programa para determinar cuánto ahorra una persona en un año";
+	Definir i Como Entero;
+	Definir acum, cant Como Real;
+	acum=0;
+	Para i<-1 Hasta 12 Hacer
+		Escribir sin saltar "Ingrese la cantidad ahorrada este mes";
+		Leer cant;
+		//A la cantidad se le va sumando lo que se va acumulando en lo ahorrado
+		acum=cant+acum;
+		Escribir "El monto ahorrado es " acum;
+	Fin Para
+FinAlgoritmo
