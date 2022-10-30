@@ -1,0 +1,19 @@
+Algoritmo positivo_negativo_0
+	Escribir "Hola. Este es un programa para encontrar la suma de dos números e indicar si da positivo, negativo o 0";
+	Definir a, b, suma Como Real;
+	Escribir sin saltar "Por favor, ingrese el primer número";
+	Leer a;
+	Escribir sin saltar "Por favor, ingrese el segundo número";
+	Leer b;
+	//Se realiza la suma y luego se compara si es postivo, negativo o cero
+	suma<-a+b;
+	Si suma>0 Entonces
+		Escribir "Suma=" suma ". Positivo";
+	SiNo
+		Si suma<0 Entonces
+			Escribir "Suma=" suma ". Negativo";
+		SiNo
+			Escribir "Suma=" suma ". Igual a 0";
+		Fin Si
+	Fin Si
+FinAlgoritmo
