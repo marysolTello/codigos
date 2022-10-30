@@ -1,0 +1,13 @@
+Algoritmo contrasena
+	Escribir "Iniciar sesión";
+	Definir x Como Entero;
+	Repetir
+		//Se va a repetir la estructura hasta que se ingrese el valor que corresponde
+		Escribir sin saltar "Ingrese la contraseña";
+		Leer x;
+		Si x<>252525 Entonces
+			Escribir "Contraseña incorrecta";
+		Fin Si
+	Hasta Que x=252525;
+	Escribir "Contraseña correcta";
+FinAlgoritmo
