@@ -1,0 +1,30 @@
+Algoritmo cant_numeroprimo
+	Escribir "Programa para mostrar cierta cantidad de números primos";
+	Definir nm, conta, p, n, i Como Real;
+	Escribir sin saltar "Por favor, ingrese la cantidad de números primos que desea";
+	Leer n;
+	//Voy a inicializar ciertas variables que necesito
+	nm=0;
+	p=0;
+	Repetir
+		//nm sirve para ir tomando los números y ahí se analiza si es primo
+		nm=nm+1;
+		//Este contador es para que cuente la cantidad de veces que se pudo hacer una división exacta con el número
+		conta=0;
+		//I va a repetir el proceso hasta el número en el que estpe nm
+		Para i<-1 Hasta nm Hacer
+			//Se ve si nm puede dar una división exacta según el número por el que vaya i
+			Si nm mod i=0 Entonces
+				//Cada vez que hay una división exacta se suma en el contador
+				conta=conta+1;
+			FinSi
+		FinPara
+		//Se ve si el contador es 2, si lo es se va acumulando en p
+		Si conta=2 Entonces
+			p=p+1;
+			//Y se muestra si nm es primo
+			Escribir nm " es número primo";
+		FinSi
+		//Todo se va a repetir hasta que p sea igual al número ingresado por el usuario
+	Hasta Que p=n;
+FinAlgoritmo
