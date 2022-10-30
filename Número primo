@@ -1,0 +1,24 @@
+Algoritmo numero_primo
+	Escribir "Programa para determinar si un número es o no primo";
+	Definir n, conta, i Como Entero;
+	Escribir sin saltar "Por favor, ingrese el número";
+	Leer n;
+	conta=0;
+	Para i<-1 Hasta n Hacer
+		//Se va a repetir el proceso hasta que se llegue al número ingresado
+		Si n mod i=0 Entonces
+			//Se analiza si el número ingresado da una división exacta al dividirlo por i
+			//Si es así, se va guardando en el contador
+			conta=conta+1;
+		Fin Si
+	Fin Para
+	//El número primo solo será si el contador es 2
+	//O sea, que el número solo puede dividirse entre 1 y por sí mismo
+	//Si hay más números, significa que puede dividirse también entre otros números
+	//Entonces, eso hace que no sea primo
+	Si conta=2 Entonces
+		Escribir n " es un número primo";
+	SiNo
+		Escribir n " no es un número primo";
+	FinSi
+FinAlgoritmo
