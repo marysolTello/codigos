@@ -1,0 +1,24 @@
+Algoritmo ciclista
+	Escribir "Programa para calcular la hora de llegada de un ciclista de una ciudad a otra";
+	Definir m, s, t, h, hl, hh, ml, mm, sl, ss Como Real;
+	Escribir "Por favor, ingrese la hora, los minutos y los segundos de salida del ciclista";
+	Escribir "Debes ingresarlos en el orden dicho";
+	Leer hh, mm, ss;
+	Escribir sin saltar "Por favor, ingrese los segundos que tardó para llegar";
+	Leer t;
+	//Trunc lo que hace es que toma el número entero y a los decimales los excluye
+	m<-trunc(t/60);
+	//Esos decimales se guardan en los segundos
+	s<-t%60;
+	//Con los minutos pasa lo mismo que con los segundos ingresados
+	h<-trunc(m/60);
+	//Y los decimales se guardan en los minutos
+	m<-m%60;
+	//Se suman todas las horas
+	hl<-hh+h;
+	//Se suman todos los minutos
+	ml<-mm+m;
+	//Se suman todos los segundos
+	sl<-ss+s;
+	Escribir "El ciclista llegó a la ciudad B a las " hl ":" ml ":" sl;
+FinAlgoritmo
