@@ -1,0 +1,11 @@
+Algoritmo noventaynueve
+	Escribir "Programa que suma la serie del 3 al 99 de 3 en 3";
+	Definir i, acum Como Entero;
+	acum=0;
+	//Se va a ir sumando número del 3 a 99 de 3 en 3
+	Para i=3 Hasta 99 con paso 3 Hacer
+		//acum acumula los números de i y los suma
+		acum<-acum+i;
+	FinPara
+	Escribir "La suma de la serie es: " acum;
+FinAlgoritmo
