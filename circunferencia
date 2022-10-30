@@ -1,0 +1,15 @@
+Funcion areaperimetro(r, a Por Referencia,p Por referencia)
+	//El Por Referencia es para cuando el valor de las variables van a cambiar
+	//Desde el algoritmo principal hasta la función
+	//r se llama igual porque es una variable que no cambiará su valor
+	p=PI*(r*2);
+	a=PI*r^2;
+FinFuncion
+Algoritmo circunferencia
+	Escribir "Programa para calcular el área y perímetro de una circunferencia";
+	Definir r, area, perim Como Real;
+	Escribir sin saltar "Ingrese el radio de la circunferencia";
+	Leer r;
+	areaperimetro(r, area, perim);
+	Escribir "El área es " area " y el perímetro " perim;
+FinAlgoritmo
