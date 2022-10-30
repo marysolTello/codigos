@@ -1,0 +1,12 @@
+Algoritmo divisibilidad_entre_2_y_5
+	Escribir "Programa que dice si un número es divisible entre 2 y 5";
+	Definir n Como Entero;
+	Escribir sin saltar "Por favor, ingrese el número";
+	Leer n;
+	//Se ve si el resto de las divisiones da 0
+	Si n mod 5=0 y n mod 2=0 Entonces
+		Escribir n " es divisible entre 2 y 5";
+	SiNo
+		Escribir n, " no es divisible entre 2 y 5";
+	Fin Si
+FinAlgoritmo
