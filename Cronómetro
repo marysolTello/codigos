@@ -1,0 +1,18 @@
+Algoritmo cronometro
+	Escribir "Cronómetro";
+	Definir s, m, h Como Entero;
+	//Las horas van a seguir hasta 23
+	Para h=0 hasta 23 Hacer
+		//Los minutos si llegan a 59 se inicializarán todo el tiempo hasta que se completen las horas
+		Para m=0 Hasta 59 Hacer
+			//Lo mismo que los minutos pasa con los segundos
+			Para s=0 Hasta 59 Hacer
+				Limpiar Pantalla;
+				//Se van escribiendo los valores
+				Escribir h ":" m ":" s;
+				//Se espera un segundo hasta que cambie
+				Esperar 1 segundo;
+			FinPara
+		FinPara
+	FinPara
+FinAlgoritmo
