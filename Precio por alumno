@@ -1,0 +1,26 @@
+Algoritmo precio_por_alumno
+	Escribir "Programa para determinar precio de renta y el pago de cada alumno por el viaje";
+	Definir alums, pr Como Entero;
+	Definir pa Como Real;
+	Escribir sin saltar "Introduzca el número de alumnos";
+	Leer alums;
+	Si alums>=100 Entonces
+		pr=65*alums;
+		Escribir "El precio de renta es " pr " y cada alumno paga 65 euros";
+	SiNo
+		Si alums>=50 y alums<=99 Entonces
+			pr=70*alums;
+			Escribir "El precio de renta es " pr " y cada alumno paga 70 euros";
+		SiNo
+			Si alums>=30 y alums<=49 Entonces
+				pr=95*alums;
+				Escribir "El precio de renta es " pr " y cada alumno paga 95 euros";
+			SiNo
+				Si alums<30 Entonces
+					pa=4000/alums;
+					Escribir "El precio de la renta es 4000 y cada alumno paga " pa;
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Si
+FinAlgoritmo
