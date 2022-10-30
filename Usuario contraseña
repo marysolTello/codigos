@@ -1,0 +1,13 @@
+Algoritmo usuario_contrasena
+	Definir nu, c Como Caracter;
+	Escribir sin saltar "Ingrese nombre de usuario";
+	Leer nu;
+	Escribir sin saltar "Ingrese contraseña";
+	Leer c;
+	//El usuario y la contrasela debe coincidir con las condiciones establecidas
+	Si nu='pepe' y c='asdasd' Entonces
+		Escribir "Has entrado al sistema";
+	SiNo
+		Escribir "Error";
+	Fin Si
+FinAlgoritmo
