@@ -1,0 +1,12 @@
+Algoritmo mayorymenor
+	Escribir "¡Hola! Este es un programa para comparar dos números y mostrar cuál es el mayor";
+	Definir n1, n2 Como Entero;
+	Escribir "Por favor, ingrese dos números";
+	Leer n1, n2;
+	//Compara ambos números y te dice cuál es mayor que cual
+	Si n1>n2 Entonces
+		Escribir n1 " es mayor que " n2;
+	SiNo
+		Escribir n1 " no es mayor que " n2;
+	Fin Si
+FinAlgoritmo
