@@ -1,0 +1,21 @@
+Algoritmo nota_final
+	Escribir "El siguiente programa calculará la nota final de un alumnos según los porcentajes obtenidos";
+	Definir n1, n2, n3, p, pp, ne, pe, nt, pt, nf Como Real;
+	Escribir sin saltar "Por favor, ingresar las calificaciones de los parciales";
+	Leer n1, n2, n3;
+	Escribir sin saltar "Por favor, ingresar la calificación del examen final";
+	Leer ne;
+	Escribir sin saltar "Por favor, ingresar la calificación del trabajo final";
+	Leer nt;
+	//Primero se calcula el promedio de de las calificaciones de los parciales
+	p=(n1+n2+n3)/3;
+	//Se calcula el 55 % del promedio
+	pp=55*p/100;
+	//Se calcula el 30 % de la nota del examen final
+	pe=30*ne/100;
+	//Se calcula el 15 % de la nota del trabajo final
+	pt=15*nt/100;
+	//Los resultado obtenidos se suman dando la nota final
+	nf=pp+pe+pt;
+	Escribir "La nota final es " nf;
+FinAlgoritmo
