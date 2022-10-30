@@ -1,0 +1,18 @@
+Algoritmo suma_hasta_0
+	Escribir "Programa que suma y da la media de números";
+	Definir n, s, m, c Como Real;
+	c<-0;
+	s<-0;
+	//El proceso se va a repetir hasta que el usuario introduzca un 0
+	Mientras n<>0 Hacer
+		Escribir sin saltar "Por favor, ingrese un número";
+		Leer n;
+		//Esto es para realizar la suma
+		s<-s+n;
+		//Y esto cuenta la cantidad de números que se ingresaron
+		c<-c+1;
+	FinMientras
+	//La suma se divide por la cantidad de números ingresados para que dé la media
+	m<-s/c;
+	Escribir "La suma es: " s ". La media es: " m;
+FinAlgoritmo
