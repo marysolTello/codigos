@@ -1,0 +1,13 @@
+Algoritmo numeroinvertido
+	Escribir "Programa para invertir un número de dos cifras ingresado";
+	Definir n, ni, d Como Entero;
+	Escribir sin saltar "Por favor, ingrese un número";
+	Leer n;
+	//Se va a calcular el resto de n dividido en 10
+	d=n%10;
+	//Ese resto se guarda en ni
+	ni=d;
+	//Y se calcula la división de n por 10 sin tener en cuenta los decimales
+	n=trunc(n/10);
+	Escribir "El número invertido es " ni, n;
+FinAlgoritmo
