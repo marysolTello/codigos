@@ -1,0 +1,13 @@
+Algoritmo menu
+	Definir op Como Entero;
+	Repetir
+		//Se lee la opción que quiere el usuario hasta que quiera salir
+		Escribir "Ingrese número de opción";
+		Escribir "Menú";
+		Escribir "1. Biblioteca";
+		Escribir "2. Amigos";
+		Escribir "3. Cuenta";
+		Escribir "4. Salir";
+		Leer op;
+	Hasta Que op=4;
+FinAlgoritmo
