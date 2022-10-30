@@ -1,0 +1,39 @@
+Algoritmo temperaturas_max_min
+	Escribir "Programa para ingresar temperaturas diferentes";
+	Escribir "Se calculará la temperatura media de los diferentes días, los días con menos y más temperatura";
+	Escribir "También se permitirá que el usuario ingrese otra temperatura para corroborar si coincide con las temperaturas antes ingresadas";
+	Definir i, c Como Entero;
+	Definir temperaturamax, temperaturamin, media, minima, t, conta Como Real;
+	Dimension temperaturamax[5];
+	Dimension temperaturamin[5];
+	Para i=0 Hasta 5-1 Hacer //se ingresan los valores
+		Escribir sin saltar "Ingrese la temperatura máxima del día";
+		Leer temperaturamax[i];
+		Escribir sin saltar "Ingrese la temperatura mínima del día";
+		Leer temperaturamin[i];
+		media=((temperaturamax[i])+(temperaturamin[i]))/2;
+		Escribir "La temperatura media de este día es " media;
+	FinPara
+	minima=temperaturamin[0];
+	c=0; //se comparan las temperaturas para sacar la mínima
+	Para i=0 hasta 5-1 Hacer
+		Si temperaturamin[i]<minima Entonces
+			minima=temperaturamin[i];
+		Sino 
+			Si temperaturamin[i]=minima Entonces //es para contar cuántos días tuvieron la menor temperatura
+				c=c+1;
+			FinSi
+		FinSi
+	FinPara
+	Escribir "Los días con menos temperatura fueron " c;
+	Escribir sin saltar "Ingrese una temperatura máxima de un día";
+	Leer t;
+	i=0;
+	conta=0;
+	Para i=0 Hasta 5-1 Hacer 
+		Si t=temperaturamax[i] Entonces
+			conta=conta+1; //es para contar cuántos días coinciden con la temperatura ingresada
+		FinSi
+	FinPara
+	Escribir conta " días coinciden con la temperatura ingresada";
+FinAlgoritmo
