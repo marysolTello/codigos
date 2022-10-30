@@ -1,0 +1,15 @@
+Algoritmo sueldo
+	Escribir "Programa para calcular el sueldo total por número de ventas hechas";
+	Definir c, sb, ct, v, st Como Entero;
+	Escribir sin saltar "Por favor, ingrese el sueldo base";
+	Leer sb;
+	Escribir sin saltar "Por favor, ingrese el número de ventas";
+	Leer v;
+	//Se calcula el 10 % del sualdo base y se guarda en c
+	c=10*sb/100;
+	//El resultado se multiplica por la cantidad de ventas
+	ct=c*v;
+	//Y se suma el resultado obtenido al sueldo base
+	st=sb+ct;
+	Escribir "Dinero por comisiones: " ct ". Sueldo total: " st;
+FinAlgoritmo
