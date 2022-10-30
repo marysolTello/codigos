@@ -1,0 +1,27 @@
+Algoritmo Buscar_dato_en_arreglo
+	Definir arreglo, i, numeroBuscado Como Entero;
+	Definir encontrado Como Logico;
+	Dimension arreglo[5];
+	Para i=0 Hasta 5-1 Hacer
+		//Hago que el usuario me llene el arreglo
+		Escribir sin saltar "Introduce un dato en el arreglo. Posición " i+1;
+		Leer arreglo[i];
+	FinPara
+	//Se introduce el número que se desea buscar
+	Escribir sin saltar "Bien. Ahora ingrese el número que desea buscar en el arreglo";
+	Leer numeroBuscado;
+	//esta variable es para analizar si el número que se busca está en el arreglo o no
+	encontrado<-falso;
+	Para i=0 Hasta 5-1 Hacer
+		//Se compara el número buscado con los datos del arreglo
+		//En caso de que se encuentre, encontrado cambia a verdadero
+		Si numeroBuscado=arreglo[i] Entonces
+			Escribir "Se encontró el número " numeroBuscado " en la posición " i+1;
+			encontrado<-verdadero;
+		FinSi
+	FinPara
+	//Sino, queda en falso y al usuario le aparece un mensaje diciéndole que el número no está en el arreglo
+	Si encontrado=falso Entonces
+		Escribir "El número ingresado no corresponde a un dato del arreglo";
+	FinSi
+FinAlgoritmo
