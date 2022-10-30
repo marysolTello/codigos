@@ -1,0 +1,32 @@
+Algoritmo entrega
+	Escribir "Programa para calcular el precio de entregas";
+	Definir zona Como Entero;
+	Definir g, c Como Real;
+	Escribir "Zonas y números:";
+	Escribir "1. América del Norte";
+	Escribir "2. América central";
+	Escribir "3. América del Sur";
+	Escribir "4. Europa";
+	Escribir "5. Asia";
+	Escribir sin saltar "Ingrese el número de zona";
+	Leer zona;
+	Escribir sin saltar "Ingrese el peso del paquete (en gramos)";
+	Leer g;
+	Si g<=5000 Entonces //ingresa el número de zona y según la zona multiplica los gramos por el precio
+		Segun zona Hacer
+			1: 
+				c=g*24;
+			2: 
+				c=g*20;
+			3:
+				c=g*21;
+			4:
+				c=g*10;
+			5: 
+				c=g*18;
+		FinSegun
+		Escribir "El precio de la entrega es " c;
+	SiNo
+		Escribir "Entrega rechazada. Se supera el peso establecido";
+	Fin Si
+FinAlgoritmo
