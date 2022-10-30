@@ -1,0 +1,10 @@
+Algoritmo pasaje_de_grados
+	Escribir "Programa para realizar un pasaje de grados Fahrenheit y grados Celsius";
+	Definir f, c Como Real;
+	Escribir sin saltar "Dame los grados Fahrenheit";
+	Leer f;
+	//Para pasar a grados celsius, a los grados fahrenheit se le resta 32
+	//El resultado se multiplica por 5 y se divide por 9
+	c=(f-32)*5/9;
+	Escribir "Los grados Fahrenheit en grados Celsius son " c;
+FinAlgoritmo
