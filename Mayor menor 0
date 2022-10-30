@@ -1,0 +1,26 @@
+Algoritmo mayor_menor_0
+	Escribir "Programa para ingresar 5 números y definir cuántos son mayores, menores o iguales a 0";
+	Definir x, n, cont1, cont2, cont3 Como Real;
+	//Se definen los contadores según las tres condiciones que se solicitan
+	cont1=0;
+	cont2=0;
+	cont3=0;
+	//El Para para que se ingresen 5 números
+	Para x<-1 Hasta 5 Hacer
+		Escribir sin saltar "Por favor, ingrese un número";
+		Leer n;
+		//Según la condición, se van a ir contando en los contadores
+		Si n>0 Entonces
+			cont1=cont1+1;
+		SiNo
+			Si n<0 Entonces
+				cont2=cont2+1;
+			SiNo
+				Si n=0 Entonces
+					cont3=cont3+1;
+				Fin Si
+			Fin Si
+		Fin Si
+	Fin Para
+	Escribir cont1 " fueron mayores a 0, " cont2 " fueron menores a 0, " cont3 " fueron iguales a 0";
+FinAlgoritmo
