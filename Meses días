@@ -1,0 +1,41 @@
+Algoritmo meses_dias
+	Escribir "Programa para identificar el mes  los números de días que tiene según un número ingresado";
+	Definir dias, nm Como Entero;
+	Definir meses Como Caracter;
+	Dimension dias[12];
+	Dimension meses[12];
+	//Debo cargar los valores en los arreglos
+	dias[0]=31;
+	dias[1]=28;
+	dias[2]=31;
+	dias[3]=30;
+	dias[4]=31;
+	dias[5]=30;
+	dias[6]=31;
+	dias[7]=31;
+	dias[8]=30;
+	dias[9]=31;
+	dias[10]=30;
+	dias[11]=31;
+	meses[0]="enero";
+	meses[1]="febrero";
+	meses[2]="marzo";
+	meses[3]="abril";
+	meses[4]="mayo";
+	meses[5]="junio";
+	meses[6]="julio";
+	meses[7]="agosto";
+	meses[8]="septiembre";
+	meses[9]="octubre";
+	meses[10]="noviembre";
+	meses[11]="diciembre";
+	Repetir
+		Escribir sin saltar "Ingrese el número de mes";
+		Leer nm;
+		//En caso de que el número no corresponda a un mes, muestra un mensaje de error
+		Si nm<1 o nm>12 Entonces
+			Escribir "Error. Número de mes incorrecto";
+		FinSi
+	Hasta Que nm<=12 y nm>=1;
+	Escribir "El número corresponde al mes " meses[nm-1] " y tiene " dias[nm-1] " días";
+FinAlgoritmo
