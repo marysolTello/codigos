@@ -1,0 +1,13 @@
+Algoritmo puntaje_total
+	Escribir "Programa para calcular el puntaje total de un equipo de fútbol";
+	Definir pg, pp, pe, pt Como Entero;
+	Escribir sin saltar "Por favor, ingrese el número de partidos ganados";
+	Leer pg;
+	Escribir sin saltar "Por favor, ingrese el número de partidos perdidos";
+	Leer pp;
+	Escribir sin saltar "Por favor, ingrese el número de partidos empatados";
+	Leer pe;
+	//Se multiplica la cantidad de partidos por su puntaje según el resultado y se suma
+	pt<-(pg*3)+(pp*0)+(pe*1);
+	Escribir "El puntaje total es ", pt;
+FinAlgoritmo
