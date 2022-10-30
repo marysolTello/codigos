@@ -1,0 +1,14 @@
+Algoritmo divisibilidad
+	Escribir "Programa para saber si un número es divisible entre 14";
+	Definir num como entero;
+	Escribir sin saltar "Por favor, ingrese un número";
+	Leer num;
+	//Se ve si el resto da 0
+	Si num mod 14=0 Entonces
+		Escribir num, " es divisible por 14";
+	SiNo
+		Si num mod 14<>0 Entonces
+			Escribir num " no es divisible";
+		FinSi
+	FinSi
+FinAlgoritmo
