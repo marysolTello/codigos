@@ -1,0 +1,36 @@
+Algoritmo areas
+	Escribir "Programa que calcula las áreas de diferentes figuras";
+	Definir x, z, A, op Como Real;
+	Escribir "Ingrese la figura de la que desea saber el área";
+	Escribir "Menu:";
+	Escribir "1. Cuadrado."; 
+	Escribir "2. Rectángulo."; 
+    Escribir "3. Triángulo";
+	Leer op; 
+	Segun op Hacer
+		1: Escribir "Cuadrado";
+			Escribir sin saltar "Por favor, ingrese la medida de un lado del cuadrado";
+			Leer x;
+			//El área del cuadrado se calcula elevando la medida del lado al cuadrado
+			A<-x^2;
+			Escribir "Área: " A;
+		2: Escribir "Rectángulo";
+			Escribir sin saltar "Por favor, ingrese la base del rectángulo";
+			Leer x;
+			Escribir sin saltar "Por favor, ingrese la altura del rectángulo";
+			Leer z;
+			//El área del rectángulo se calcula multiplicando su base por su altura
+			A<-x*z;
+			Escribir "Área: " A;
+		3: Escribir "Triángulo";
+			Escribir sin saltar "Por favor, ingrese la base del triángulo";
+			Leer x;
+			Escribir sin saltar "Por favor, ingrese la altura del triángulo";
+			Leer z;
+			//El área del triángulo se calcula multiplicando su base por su altura y dividiéndolo por 2
+			A<-x*z/2;
+			Escribir "Área: " A;
+		De Otro Modo:
+			Escribir "Fin del programa";
+	FinSegun
+FinAlgoritmo
