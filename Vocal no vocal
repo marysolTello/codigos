@@ -1,0 +1,15 @@
+Algoritmo vocal_novocal
+	Escribir "Programa para definir si una letra es vocal o no vocal";
+	Definir letra Como Caracter;
+	Repetir
+		Escribir "Ingrese letra";
+		Leer letra;
+		Segun letra Hacer
+			//Se ve si la letra ingresada coincide con las vocales
+			"a", "A","e", "E", "i", "I", "o", "O", "u", "U" : Escribir "Vocal";
+			De Otro Modo:
+				Escribir "No vocal";
+		Fin Segun
+		//El proceso se repite hasta que se introduzca un espacio
+	Hasta Que letra=" ";
+FinAlgoritmo
