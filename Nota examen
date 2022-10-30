@@ -1,0 +1,13 @@
+Algoritmo nota_examen
+	Escribir "Programa para calcular la nota final de un examen";
+	Definir rtac, rtai, rtab, nf Como Entero;
+	Escribir sin saltar "Por favor, ingrese las respuestas correctas";
+	Leer rtac;
+	Escribir sin saltar "Por favor, ingrese las respuestas incorrectas";
+	Leer rtai;
+	Escribir sin saltar "Por favor, ingrese las respuestas en blanco";
+	Leer rtab;
+	//La cantidad de respuestas se multiplicarán por el puntaje que valen
+	nf<-(5*rtac)+(rtai*(-1))+(rtab*0);
+	Escribir "La nota final es " nf;
+FinAlgoritmo
